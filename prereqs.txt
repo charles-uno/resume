@@ -1,0 +1,7 @@
+need to sudo apt-get install...
+
+texlive-base
+latexmk
+texlive-latex-extra
+# texlive-fonts-recommended ... or maybe not? 
+texlive-fonts-extra

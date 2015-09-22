@@ -1,0 +1,44 @@
+% skills_resume.tex
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% this package doesn't seem to exist in the version on the chromebook. it's a font. 
+\usepackage{tgpagella}
+
+
+\usepackage{xspace} % \xspace
+\usepackage[usenames,dvipsnames]{xcolor} % Color text
+\usepackage[normalem]{ulem} % Add \sout, used to add rules to headlines
+\usepackage{enumitem} % Allows tailoring of lists, descriptions, etc
+\usepackage{calc} % Add \widthof
+\usepackage[hidelinks]{hyperref} % Adds links within the document, hidelinks prevents drawing boxes around the links
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+%% there is a bit too much white space at the top
+%\addtolength{\topmargin}{-0.25in}
+
+% Custom macros
+\input{macros.tex}
+
+% and the actual content starts here
+\begin{document}
+
+% name and contact info
+\input{subsections/header.tex}
+
+% Skills Summary
+\input{subsections/skills.tex}
+
+% Work
+\input{subsections/work_history.tex}
+
+% Education
+\input{subsections/education.tex}
+
+\end{document}
