@@ -1,44 +1,225 @@
-% skills_resume.tex
+% Charles McEachern
 
+% Fall 2015
+
+% Adapted from work by Alex Gude. 
+
+% Note: This document wraps at column 80. 
+
+% #############################################################################
+% ############################################################## Document Setup
+% #############################################################################
+
+% Set the size and shape of the document. 
 \documentclass[11pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.8in]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{mdwlist}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
+\usepackage[letterpaper, margin=0.8in]{geometry}
+\addtolength{\topmargin}{-0.25in}
 
-% this package doesn't seem to exist in the version on the chromebook. it's a font. 
-\usepackage{tgpagella}
-
-
-\usepackage{xspace} % \xspace
-\usepackage[usenames,dvipsnames]{xcolor} % Color text
-\usepackage[normalem]{ulem} % Add \sout, used to add rules to headlines
-\usepackage{enumitem} % Allows tailoring of lists, descriptions, etc
-\usepackage{calc} % Add \widthof
-\usepackage[hidelinks]{hyperref} % Adds links within the document, hidelinks prevents drawing boxes around the links
-\pagestyle{empty}
+% Reduce padding on the edges of nested lists. 
 \setlength{\tabcolsep}{0em}
 
-%% there is a bit too much white space at the top
-%\addtolength{\topmargin}{-0.25in}
+% Disable page numbering. 
+\pagestyle{empty}
 
-% Custom macros
-\input{macros.tex}
+% Set the font used by the document. This line has to be commented out
+% sometimes -- I think this particular font isn't available for ARM processors
+% (such as the one in my Chromebook). 
+\usepackage{tgpagella}
 
-% and the actual content starts here
+% Allow colored text. 
+\usepackage[usenames, dvipsnames]{xcolor}
+
+% Allow hyperlinks, and prevent LaTeX from drawing boxes around them. 
+\usepackage[hidelinks]{hyperref}
+
+% For better handling of whitespace around macros. 
+\usepackage{xspace}
+
+% Add \sout, used to add rules to header lines. 
+\usepackage[normalem]{ulem}
+
+% Allow additional formatting of lists. 
+\usepackage{enumitem}
+
+% Add \widthof for better indentation handling. 
+\usepackage{calc}
+
+% The following packages don't seem to be necessary. Uncommenting them reduces
+% the number of warnings seen during compilation, but doesn't actually affect
+% the PDF. "Packages only get added. Never removed." -Alex
+%\usepackage[utf8]{inputenc}
+%\usepackage{mdwlist}
+%\usepackage[T1]{fontenc}
+%\usepackage{textcomp}
+
+% #############################################################################
+% ###################################################################### Macros
+% #############################################################################
+
+% Left-align the first argument and right-align the second. 
+\newcommand{\headerrow}[2]{
+  \begin{tabular*}{\linewidth}{l@{ \extracolsep{\fill} }r} #1 & #2 
+  \end{tabular*}}
+
+% Format the dash in a year range nicely. 
+\newcommand{\YearRange}[2]{#1--#2}
+
+% Section header, colored, and with a line extending to the right edge. 
+\newcommand{\ResumeSection}[1]{
+  \section*{ {\color{MidnightBlue}#1 \sout{\hfill} } } }
+
+% Attach a hyperlink to a URL. 
+\newcommand{\URL}[1]{\href{#1}{#1}\xspace}
+
+% Retouch the plusses to get "C++" to look nice. 
+\newcommand{\CPP}{
+  C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
+
+% #############################################################################
+% ############################################################## Resume Content
+% #############################################################################
+
 \begin{document}
 
-% name and contact info
-\input{subsections/header.tex}
+% =============================================================================
+% ====================================================================== Header
+% =============================================================================
 
-% Skills Summary
-\input{subsections/skills.tex}
+% The header would be an appropriate place to put a link to LinkedIn -- or,
+% even better, GitHub. I chose to instead link to my own website (which itself
+% has a prominent links to my LinkedIn account and several projects on GitHub).
+% This is mostly to show off my basic knowledge of HTML/CSS and Javascript. 
 
-% Work
-\input{subsections/experience.tex}
+\begin{center}
+  { \Huge \textbf{Charles McEachern} }
 
-% Education
-\input{subsections/education.tex}
+  \vspace{7px}
+
+  St Paul, MN
+  \ \ \textbullet
+  \ \ (651) 269-9245
+  \ \ \textbullet
+  \ \ \href{mailto:mceachern@physics.umn.edu}{mceachern@physics.umn.edu}
+  \ \ \textbullet
+  \ \ \URL{www.cookingwithcharles.com}
+
+  \vspace{3px}
+
+\end{center}
+
+% =============================================================================
+% ====================================================================== Skills
+% =============================================================================
+
+\ResumeSection{Skills}
+
+% Indentation is set by the width of the bold text "Languages". 
+\begin{description}[leftmargin=!, labelindent=\parindent, 
+                    labelwidth=\widthof{\bfseries Languages}]
+  \parskip=0.1em
+
+  \item[Languages]
+    Bash, \CPP, Fortran, Python, some experience with HTML/CSS and JavaScript
+
+  \item[Tools]
+    BeautifulSoup, git, \LaTeX, Linux, Matplotlib, MPI, NumPy, OpenMP
+
+\end{description}
+
+% =============================================================================
+% ================================================================== Experience
+% =============================================================================
+
+% Note that LaTeX half-cares about whitespace. Source text can be wrapped and
+% indented for legibility without affecting the PDF, but a double line break
+% starts a new paragraph. 
+
+\ResumeSection{Experience}
+
+\begin{itemize}[leftmargin=\parindent]
+  \parskip=0.1em
+  \itemsep=1.5em
+
+  \item[]
+    \headerrow{ \textbf{University of Minnesota Physics Department} }
+              { \textbf{Minneapolis, MN} }
+    \headerrow{ \emph{Research Assistant} }
+              { \emph{ \YearRange{05/2009}{Present} } }
+    \begin{itemize}
+      \item Designed and implemented a simulation of electromagnetic waves in
+            Earth's magnetosphere. 
+      \item Performed serial and parallel benchmarks in \CPP and Fortran.
+            Restructured execution to increase speed and decrease memory use. 
+      \item Analyzed hundreds of gigabytes of output to identify novel 
+            patterns. Created clear, handsome plots and animations using
+            Matplotlib. 
+      \item Presented methods and results through posters, colloquia, and
+            workshops. 
+    \end{itemize}
+
+  \item[]
+    \headerrow{ \textbf{Cray Inc} }{ \textbf{St Paul, MN} }
+    \headerrow{ \emph{Performance Intern} }
+              { \emph{ \YearRange{11/2014}{Present} } }
+    \begin{itemize}
+      \item Deployed an ensemble of nightly tests to detect bugs in Cray's 
+            performance tools suite. 
+      \item Created a multi-process Python harness to configure programming
+            environments, dynamically generate source code, compile and run
+            tests, and parse performance reports. 
+      \item Isolated bugs in the performance tools, as well as in Cray, Gnu,
+            and Intel compilers. 
+      \item Brainstormed test features with other members of the performance
+            tools team. Improved test usefulness and efficiency in response to
+            feedback. 
+    \end{itemize}
+
+  \item[]
+    \headerrow{ \textbf{University of Minnesota Physics Department} }
+              { \textbf{Minneapolis, MN} }
+    \headerrow{ \emph{Teaching Assistant} }
+              { \emph{ \YearRange{01/2011}{12/2014} } }
+    \begin{itemize}
+      \item Communicated detailed concepts to audiences with varied technical
+            backgrounds. Adapted coaching strategies to the individual needs of
+            at-risk students. 
+      \item Supported students outside of class through office hours, tutoring,
+            and pizza review sessions. 
+      \item Coordinated work flow between professors, graduate teaching
+            assistants, and undergraduate tutors as Head TA. 
+      \item Developed exams, laboratory exercises, and other instructional
+            materials. 
+    \end{itemize}
+
+\end{itemize}
+
+% =============================================================================
+% =================================================================== Education
+% =============================================================================
+
+\ResumeSection{Education}
+
+\begin{itemize}[leftmargin=\parindent]
+  \parskip=0.1em
+
+  \item[]
+    \headerrow{ \textbf{University of Minnesota} }{ \textbf{Minneapolis, MN} }
+    \headerrow{ \emph{PhD, Space Physics, Burlaga/Arctowski Medal Fellow} }
+              { \emph{ \YearRange{05/2009}{04/2016 (est)} } }
+
+    \item[]
+      \headerrow{ \textbf{St Olaf College} }{ \textbf{Northfield, MN} }
+      \headerrow{ \emph{BA, Math (Distinction), Physics (Distinction), 
+                 Magna Cum Laude} }
+                { \emph{ \YearRange{09/2005}{05/2009} } }
+
+\end{itemize}
+
+
+% =============================================================================
+% =============================================================== End of Resume
+% =============================================================================
 
 \end{document}
+
+
