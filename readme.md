@@ -6,7 +6,7 @@ This template uses LaTeX to create a polished resume. It's based on work by Alex
 
 Papeeria is an online LaTeX editor. Just hit the "compile" button at the top and it'll spit out a PDF:
 
-https://www.papeeria.com/p/61de30a2-9244-4921-aa71-0882213c36c1#/main.tex
+https://www.papeeria.com/join?token_id=7f664d39-8d47-4110-8c66-bf940a987e15&retry=3
 
 # Prerequisites
 
