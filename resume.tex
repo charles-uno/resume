@@ -48,9 +48,6 @@
     \section*{ {\color{MidnightBlue}#1 \sout{\hfill} } }
 }
 
-% Attach a hyperlink to a URL.
-\newcommand{\URL}[1]{\href{#1}{#1}\xspace}
-
 % Retouch the plusses to get "C++" to look nice.
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
 
@@ -74,19 +71,23 @@
 
     \vspace{12pt}
 
-    \includesvg[height=8px]{envelope-regular.svg}
+    \includesvg[height=8px]{icons/envelope-regular.svg}
     \hbmp
     \href{mailto:ch@rles.uno}{ch@rles.uno}
     \hbump
-    \includesvg[height=8px]{link-solid.svg}
+    \includesvg[height=8px]{icons/link-solid.svg}
     \hbmp
-    \URL{www.charles.uno}
+    \href{www.charles.uno}{charles.uno}
     \hbump
-    \includesvg[height=8px]{phone-solid.svg}
+    \includesvg[height=8px]{icons/phone-solid.svg}
     \hbmp
     \href{tel:+16512699245}{(651) 269-9245}
+%    \hbump
+%    \includesvg[height=8px]{icons/github-brands.svg}
+%    \hbmp
+%    \href{https://github.com/charles-uno}{charles-uno}
     \hbump
-    \includesvg[height=8px]{map-marker-alt-solid.svg}
+    \includesvg[height=8px]{icons/map-marker-alt-solid.svg}
     \hbmp
     Minneapolis, MN
 
