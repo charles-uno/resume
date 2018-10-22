@@ -54,6 +54,7 @@
 % Finagle with the icon spacing instead of bullets.
 \newcommand{\hbump}{\hspace{0.4in}}
 \newcommand{\hbmp}{\hspace{0.02in}}
+\newcommand{\iconsize}{8px}
 
 % ######################################################################
 
@@ -71,23 +72,23 @@
 
     \vspace{12pt}
 
-    \includesvg[height=8px]{icons/envelope-regular.svg}
+    \includesvg[height=\iconsize]{icons/envelope-regular.svg}
     \hbmp
     \href{mailto:ch@rles.uno}{ch@rles.uno}
     \hbump
-    \includesvg[height=8px]{icons/link-solid.svg}
+    \includesvg[height=\iconsize]{icons/link-solid.svg}
     \hbmp
     \href{www.charles.uno}{charles.uno}
     \hbump
-    \includesvg[height=8px]{icons/phone-solid.svg}
+    \includesvg[height=\iconsize]{icons/phone-solid.svg}
     \hbmp
     \href{tel:+16512699245}{(651) 269-9245}
 %    \hbump
-%    \includesvg[height=8px]{icons/github-brands.svg}
+%    \includesvg[height=\iconsize]{icons/github-brands.svg}
 %    \hbmp
 %    \href{https://github.com/charles-uno}{charles-uno}
     \hbump
-    \includesvg[height=8px]{icons/map-marker-alt-solid.svg}
+    \includesvg[height=\iconsize]{icons/map-marker-alt-solid.svg}
     \hbmp
     Minneapolis, MN
 
@@ -106,7 +107,7 @@
         Bash, C/\CPP, Fortran, Python, some experience with HTML/CSS and JavaScript
 
     \item[Tools]
-        Docker, Elasticsearch, Git, Jenkins, Linux, Matplotlib, MPI/OpenMP, RPMs
+        Elasticsearch, Git, Jenkins/Docker, Linux, Matplotlib, MPI/OpenMP, RPMs
 
 \end{description}
 
@@ -128,10 +129,10 @@
             { \emph{System Test Engineer} }
             { \emph{ \YearRange{2016}{Present} } }
         \begin{itemize}
-            \item Built an end-to-end pipeline using Jenkins and Docker to automatically compile, test, and distribute on commit. Prioritized improvements and maintenance with stakeholders in mind.
-            \item Developed an API for control and testing of the Cray XC liquid cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
-            \item Designed and implemented a parallel, plugin-based Python module for analysis of supercomputer system logs. Facilitated triage for in-house machines as well as customer sites.
-            \item Administered the team's 200-node mainframe, ensuring reliable hardware and software resources.
+            \item Developed an API for control and testing of the Cray XC liquid cooling system. Diagnosed bugs that, if released, would have cost millions of dollars in waste and damage.
+            \item Built an end-to-end Jenkins pipeline to automatically compile, test, package, and distribute on commit. Facilitated the retirement of a 20-year tangle of VMs, cron jobs, and hotfixes.
+            \item Designed and implemented a plugin-based Python module for analysis of supercomputer system logs. Processed terrabytes of text to isolate intermittent hardware faults.
+            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
         \end{itemize}
 
     \item[]
@@ -141,7 +142,7 @@
             { \emph{ \YearRange{2014}{2015} } }
         \begin{itemize}
             \item Created a parallel harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
-            \item Automated environment configuration, source code generation, and performance report parsing. Increased unit test code coverage dramatically.
+            \item Automated environment configuration, multi-language source code generation, and performance report parsing. Increased unit test code coverage dramatically.
             \item Tailored test cases to the needs of the performance tools team. Responded promptly to feedback.
         \end{itemize}
 
@@ -153,9 +154,9 @@
             { \emph{Graduate Student} }
             { \emph{ \YearRange{2009}{2016} } }
         \begin{itemize}
-            \item Led laboratory exercises and created teaching resources. Tutored at-risk students individually. Communicated detailed concepts to audiences with varied technical backgrounds.
-            \item Coordinated work flow between professors, graduate teaching assistants, and undergraduate tutors as Head TA. Coached new team members to improve student outcomes.
-            \item Optimized a model of near-Earth electromagnetic waves. Analyzed hundreds of gigabytes of data to identify novel patterns. Presented methods and results via colloquia and workshops.
+            \item Optimized a model of near-Earth electromagnetic waves. Analyzed hundreds of gigabytes of data to identify novel patterns. Presented results via posters, papers, and workshops.
+            \item Led laboratory exercises and tutored at-risk students individually. Communicated detailed concepts to audiences with varied technical backgrounds.
+            \item Coordinated between professors, graduate teaching assistants, and undergraduate tutors as Head TA. Coached new team members to improve student outcomes.
         \end{itemize}
 
 \end{itemize}
