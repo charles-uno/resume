@@ -1,25 +1,45 @@
 # Charles McEachern
-
 # Fall 2015
 
 TODAY := `date +%Y%m%d`
 
-# In the terminal, "make" is interpreted as "make resume.pdf".
-all: resume.pdf
-	mv resume.pdf charles-resume-$(TODAY).pdf
+# ======================================================================
 
-# If the makefile or LaTeX file has changed, create a new PDF.
+IMAGE := resume-build-env
+MOUNT := /resume-mount
+
+docker: Dockerfile resume.tex
+	docker build . -f Dockerfile -t $(IMAGE)
+	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) $(IMAGE) make --directory=$(MOUNT) --file=$(MOUNT)/makefile resume.pdf
+
+.PHONY: container
+container: Dockerfile
+	docker build . -f Dockerfile -t $(IMAGE)
+
+# ======================================================================
+
 resume.pdf: resume.tex makefile
 	latexmk -pdf resume.tex -halt-on-error --shell-escape
+	mv resume.pdf charles-resume-$(TODAY).pdf
+	latexmk -c resume.tex
+
+# ======================================================================
+
+.PHONY: icons
+
+ICONS := $(patsubst %.svg,%,$(wildcard icons/*.svg))
+
+# NOTE -- Looks like there's a bug in the inkscape/convert commands in the containers. So let's pack up some PNGs or PDFs into the repo. 
+
+icons:
+#	$(foreach ICON,$(ICONS),inkscape -f $(ICON).svg -e $(ICON).png;)
+	$(foreach ICON,$(ICONS),convert $(ICON).svg $(ICON).png;)
+
+#	mogrify -format png *.svg
 
 
-# Delete all regeneratable files, excluding the PDF, and any temporary files.
-# Note that "rm *~" will throw errors if there are no temporary files to
-# delete. It also returns false to make, which causes make to throw another
-# error. We don't need to see that. Output is redirected (with "> /dev/null"),
-# we guarantee that "true" is always returned to the make command
-# (with "|| true"), and we silence the command itself ("@-") so we don't have
-# to look at the monstrosity we just created.
+# ======================================================================
+
 clean:
 	latexmk -c resume.tex
-	@-rm *~ > /dev/null || true
+	@-rm *~ > /dev/null ||:
