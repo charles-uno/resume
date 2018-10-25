@@ -25,18 +25,15 @@ resume.pdf: resume.tex makefile
 
 # ======================================================================
 
-.PHONY: icons
+# NOTE -- Looks like there's a bug in the inkscape/convert commands in the containers. So let's pack up some PNGs or PDFs into the repo.
 
-ICONS := $(patsubst %.svg,%,$(wildcard icons/*.svg))
+#.PHONY: icons
+#ICONS := $(patsubst %.svg,%,$(wildcard icons/*.svg))
 
-# NOTE -- Looks like there's a bug in the inkscape/convert commands in the containers. So let's pack up some PNGs or PDFs into the repo. 
-
-icons:
+#icons:
 #	$(foreach ICON,$(ICONS),inkscape -f $(ICON).svg -e $(ICON).png;)
-	$(foreach ICON,$(ICONS),convert $(ICON).svg $(ICON).png;)
-
+#	$(foreach ICON,$(ICONS),convert $(ICON).svg $(ICON).png;)
 #	mogrify -format png *.svg
-
 
 # ======================================================================
 
