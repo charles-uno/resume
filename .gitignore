@@ -8,6 +8,7 @@
 *.ps
 *.jpeg
 *.eps
+!icons/*
 
 #Network File System
 .nfs*
