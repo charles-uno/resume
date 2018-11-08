@@ -19,13 +19,16 @@ container: Dockerfile
 # ======================================================================
 
 resume.pdf: resume.tex makefile
+	rm *.pdf
 	latexmk -pdf resume.tex -halt-on-error --shell-escape
-	mv resume.pdf charles-resume-$(TODAY).pdf
+	cp resume.pdf charles-resume-$(TODAY).pdf
 	latexmk -c resume.tex
 
 # ======================================================================
 
-# NOTE -- Looks like there's a bug in the inkscape/convert commands in the containers. So let's pack up some PNGs or PDFs into the repo.
+# NOTE -- Looks like there's a bug in inkscape/convert/mogrify as far as
+# converting SVGs, at least on an OSX kernel. Weird. Converted on
+# Ubuntu, add the PDFs to the repo. 
 
 #.PHONY: icons
 #ICONS := $(patsubst %.svg,%,$(wildcard icons/*.svg))
