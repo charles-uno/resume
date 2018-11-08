@@ -19,7 +19,7 @@ container: Dockerfile
 # ======================================================================
 
 resume.pdf: resume.tex makefile
-	rm *.pdf
+	rm *.pdf ||:
 	latexmk -pdf resume.tex -halt-on-error --shell-escape
 	cp resume.pdf charles-resume-$(TODAY).pdf
 	latexmk -c resume.tex
