@@ -34,6 +34,8 @@
 \usepackage{graphicx}
 
 
+\usepackage{floatrow}
+
 % ######################################################################
 
 % Left-align the first argument and right-align the second.
@@ -59,6 +61,8 @@
 \newcommand{\hbmp}{\hspace{0.02in}}
 \newcommand{\iconsize}{8px}
 
+\newcommand{\boxwidth}{4cm}
+
 % ######################################################################
 
 \begin{document}
@@ -75,22 +79,18 @@
 
     \vspace{12pt}
     \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
-%    \includesvg[height=\iconsize]{icons/envelope-regular.svg}
     \hbmp
     \href{mailto:ch@rles.uno}{ch@rles.uno}
     \hbump
     \includegraphics[height=\iconsize]{icons/link-solid.pdf}
-%    \includesvg[height=\iconsize]{icons/link-solid.svg}
     \hbmp
     \href{www.charles.uno}{charles.uno}
     \hbump
     \includegraphics[height=\iconsize]{icons/github-brands.pdf}
-%    \includesvg[height=\iconsize]{icons/github-brands.svg}
     \hbmp
     \href{https://github.com/charles-uno}{charles-uno}
     \hbump
     \includegraphics[height=\iconsize]{icons/phone-solid.pdf}
-%    \includesvg[height=\iconsize]{icons/phone-solid.svg}
     \hbmp
     \href{tel:+16512699245}{(651) 269-9245}
     \hbump
@@ -100,6 +100,43 @@
     Minneapolis, MN
 
 \end{center}
+
+
+
+
+% TODO -- Figure out uniform columns instead of uniform gaps. 
+
+%\begin{figure}
+%    \MyBox[blue]{
+%        \begin{floatrow}
+%            \framebox[\boxwidth][c]{
+%                \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
+%                \hbmp
+%                \href{mailto:ch@rles.uno}{ch@rles.uno}
+%            }\qquad
+%            \framebox[\boxwidth][c]{
+%                \includegraphics[height=\iconsize]{icons/link-solid.pdf}
+%                \hbmp
+%                \href{www.charles.uno}{charles.uno}
+%            }\qquad
+%            \framebox[\boxwidth][c]{
+%                \includegraphics[height=\iconsize]{icons/github-brands.pdf}
+%                \hbmp
+%                \href{https://github.com/charles-uno}{charles-uno}
+%            }\qquad
+%            \framebox[\boxwidth][c]{
+%                \includegraphics[height=\iconsize]{icons/phone-solid.pdf}
+%                \hbmp
+%                \href{tel:+16512699245}{(651) 269-9245}
+%            }\qquad
+%            \framebox[\boxwidth][c]{
+%                \includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf}
+%                \hbmp
+%                Minneapolis, MN
+%            }
+%        \end{floatrow}
+%    }
+%\end{figure}
 
 % ======================================================================
 
@@ -111,10 +148,10 @@
     \parskip=0.1em
 
     \item[Languages]
-        Python, Bash, Go, C/\CPP, Fortran, some experience with HTML/CSS and JavaScript
+        Python, Bash, Groovy, Go, C/\CPP, some experience with HTML/CSS and JavaScript
 
     \item[Tools]
-        Linux, Git, Jenkins, Docker, RPMs, REST APIs, ELK, CircuitPython, MPI/OpenMP
+        Linux, Git, Jenkins, Docker, RPMs, REST APIs, CircuitPython, ELK, and Scrum
 
 \end{description}
 
