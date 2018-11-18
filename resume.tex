@@ -1,10 +1,10 @@
 % Charles McEachern
 % Adapted from work by Alex Gude.
 
-% ######################################################################
+% ======================================================================
 
 % Set the size and shape of the document.
-\documentclass[11pt,letterpaper]{article}
+\documentclass[12pt,letterpaper]{article}
 \usepackage[letterpaper, margin=0.8in, bottom=0.5in]{geometry}
 \addtolength{\topmargin}{-0.25in}
 % Reduce padding on the edges of nested lists.
@@ -16,7 +16,7 @@
 % Set the font used by the document. This line has to be commented out
 % sometimes -- I think this particular font isn't available for ARM
 % processors (such as the one in my Chromebook).
-\usepackage{tgpagella}
+%\usepackage{tgpagella}
 % Allow colored text.
 \usepackage[usenames, dvipsnames]{xcolor}
 % Allow hyperlinks, and prevent LaTeX from drawing boxes around them.
@@ -33,49 +33,53 @@
 %\usepackage{svg}
 \usepackage{graphicx}
 
-
 \usepackage{floatrow}
 
-% ######################################################################
+% ======================================================================
 
 % Left-align the first argument and right-align the second.
-\newcommand{\headerrow}[2]{
-    \begin{tabular*}{\linewidth}{l@{ \extracolsep{\fill} }r} #1 & #2
+\newcommand{\headerpair}[2]{
+    \begin{tabular*}{\linewidth}{l@{ \extracolsep{\fill} }r} {\large\emph{#1}} & {\large\emph{#2}}
     \end{tabular*}
 }
+
+% Left-align, center, right-align.
+\newcommand{\headertriple}[3]{
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r} {\large\emph{#1}} & {\large\emph{#2}} & {\large\emph{#3}}
+    \end{tabular*}
+}
+
+% Switch this up if you can't decide.
+\newcommand{\headerrow}[3]{\headerpair{#1, #2}{#3}}
 
 % Format the dash in a year range nicely.
 \newcommand{\YearRange}[2]{#1--#2}
 
 % Section header, colored, and with a line extending to the right edge.
-\newcommand{\ResumeSection}[1]{
-%    \vspace{-10pt}
-    \section*{ {\color{MidnightBlue}#1 \sout{\hfill} } }
-}
+\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}#1 \sout{\hfill}}}}
 
 % Retouch the plusses to get "C++" to look nice.
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
 
 % Finagle with the icon spacing instead of bullets.
-\newcommand{\hbump}{\hspace{0.32in}}
+\newcommand{\hbump}{\hspace{0.4in}}
 \newcommand{\hbmp}{\hspace{0.02in}}
 \newcommand{\iconsize}{8px}
 
-\newcommand{\boxwidth}{4cm}
-
-% ######################################################################
+% ======================================================================
 
 \begin{document}
 
-% ======================================================================
+% ----------------------------------------------------------------------
 
-% The header would be an appropriate place to put a link to LinkedIn -- or,
-% even better, GitHub. I chose to instead link to my own website (which itself
-% has a prominent links to my LinkedIn account and several projects on GitHub).
-% This is mostly to show off my basic knowledge of HTML/CSS and Javascript.
+% The header would be an appropriate place to put a link to LinkedIn --
+% or, even better, GitHub. I chose to instead link to my own website
+% (which itself has a prominent links to my LinkedIn account and several
+% projects on GitHub). This is mostly to show off my basic knowledge of
+% HTML/CSS and Javascript.
 
 \begin{center}
-    { \Huge \textbf{Charles McEachern} }
+    { \huge \textbf{Charles McEachern} }
 
     \vspace{12pt}
     \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
@@ -86,153 +90,100 @@
     \hbmp
     \href{www.charles.uno}{charles.uno}
     \hbump
-    \includegraphics[height=\iconsize]{icons/github-brands.pdf}
-    \hbmp
-    \href{https://github.com/charles-uno}{charles-uno}
-    \hbump
     \includegraphics[height=\iconsize]{icons/phone-solid.pdf}
     \hbmp
     \href{tel:+16512699245}{(651) 269-9245}
     \hbump
     \includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf}
-%    \includesvg[height=\iconsize]{icons/map-marker-alt-solid.svg}
     \hbmp
     Minneapolis, MN
-
 \end{center}
 
+% ----------------------------------------------------------------------
 
+\ResumeSection{Summary}
 
+Ten years experience using Python for automation and analysis. Fluent in Linux and shell scripting. Recent emphasis on CI/CD infrastructure with Groovy, Jenkins, and Docker. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
 
-% TODO -- Figure out uniform columns instead of uniform gaps. 
+%Hobby projects involving Go, Javascript, and microcontrollers.
 
-%\begin{figure}
-%    \MyBox[blue]{
-%        \begin{floatrow}
-%            \framebox[\boxwidth][c]{
-%                \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
-%                \hbmp
-%                \href{mailto:ch@rles.uno}{ch@rles.uno}
-%            }\qquad
-%            \framebox[\boxwidth][c]{
-%                \includegraphics[height=\iconsize]{icons/link-solid.pdf}
-%                \hbmp
-%                \href{www.charles.uno}{charles.uno}
-%            }\qquad
-%            \framebox[\boxwidth][c]{
-%                \includegraphics[height=\iconsize]{icons/github-brands.pdf}
-%                \hbmp
-%                \href{https://github.com/charles-uno}{charles-uno}
-%            }\qquad
-%            \framebox[\boxwidth][c]{
-%                \includegraphics[height=\iconsize]{icons/phone-solid.pdf}
-%                \hbmp
-%                \href{tel:+16512699245}{(651) 269-9245}
-%            }\qquad
-%            \framebox[\boxwidth][c]{
-%                \includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf}
-%                \hbmp
-%                Minneapolis, MN
-%            }
-%        \end{floatrow}
-%    }
-%\end{figure}
+% NOTE -- Previous versions instead listed languages and skills. Check
+% back in the Git history to see that.
 
-% ======================================================================
-
-\ResumeSection{Skills}
-
-% Indentation is set by the width of the bold text "Languages".
-\begin{description}[leftmargin=!, labelindent=\parindent,
-                    labelwidth=\widthof{\bfseries Languages}]
-    \parskip=0.1em
-
-    \item[Languages]
-        Python, Bash, Groovy, Go, C/\CPP, some experience with HTML/CSS and JavaScript
-
-    \item[Tools]
-        Linux, Git, Jenkins, Docker, RPMs, REST APIs, CircuitPython, ELK, and Scrum
-
-\end{description}
-
-% ======================================================================
-
-% Note that LaTeX half-cares about whitespace. Source text can be
-% wrapped and indented for legibility without affecting the PDF, but a
-% double line break starts a new paragraph.
+% ----------------------------------------------------------------------
 
 \ResumeSection{Experience}
 
 \begin{itemize}[leftmargin=\parindent]
     \parskip=0.1em
-    \itemsep=1.5em
-
+    \itemsep=1.2em
     \item[]
-        \headerrow{ \textbf{Cray Inc} }{ \textbf{Bloomington, MN} }
         \headerrow
-            { \emph{System Test Engineer} }
-            { \emph{ \YearRange{2016}{Present} } }
-        \begin{itemize}
-            \item Built an end-to-end Jenkins pipeline to automatically compile, test, package, and distribute on commit. Facilitated the retirement of a 20-year tangle of VMs, cron jobs, and hotfixes.
-            \item Developed an API for control and testing of the Cray XC liquid cooling system. Diagnosed bugs that, if released, would have cost millions of dollars in waste and damage.
-            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
+            {Software Engineer}
+            {Cray Inc}
+            {\YearRange{2016}{Present}}
+        \begin{itemize}[leftmargin=\parindent]
+            \item Built a \textbf{CI/CD} pipeline using \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and distributed code on commit in support of 20 engineers and 50 repos.
+%            \item Built a \textbf{CI/CD} pipeline using \textbf{Jenkins} and \textbf{Docker} to compile, test, package, and distribute on commit. Facilitated the retirement of a 20-year tangle of VMs, cron jobs, and hotfixes.
+            \item Interfaced with \textbf{REST APIs} for BitBucket and \textbf{Jenkins} using \textbf{Python} scripts. Automated triggers and cleanup to eliminate hours of error-prone browser menus.
+            \item Implemented a \textbf{Python} module for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
+%            \item Exported and analyzed mainframe logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
+%            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
             \item Mentored two interns, both of whom were awarded extensions. Prepared and presented educational materials to onboard dozens of new employees.
         \end{itemize}
-
     \item[]
-        \headerrow{ \textbf{Cray Inc} }{ \textbf{St Paul, MN} }
         \headerrow
-            { \emph{Performance Intern} }
-            { \emph{ \YearRange{2014}{2015} } }
-        \begin{itemize}
-            \item Created a parallel harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
-            \item Automated environment configuration, multi-language source code generation, and performance report parsing. Increased unit test code coverage dramatically.
-            \item Tailored test cases to the needs of the performance tools team. Responded promptly to feedback.
+            {Performance Intern}
+            {Cray Inc}
+            {\YearRange{2014}{2015}}
+        \begin{itemize}[leftmargin=\parindent]
+            \item Created a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
+            \item Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing. Increased test code coverage dramatically.
+%            \item Tailored test cases to the needs of the performance tools team. Responded promptly to feedback.
         \end{itemize}
-
     \item[]
         \headerrow
-            { \textbf{University of Minnesota Physics Department} }
-            { \textbf{Minneapolis, MN} }
-        \headerrow
-            { \emph{Graduate Student} }
-            { \emph{ \YearRange{2009}{2016} } }
-        \begin{itemize}
-            \item Optimized a model of near-Earth electromagnetic waves. Analyzed hundreds of gigabytes of data to identify novel patterns. Presented results via posters, papers, and workshops.
+            {PhD Candidate}
+            {University of Minnesota}
+            {\YearRange{2009}{2016}}
+        \begin{itemize}[leftmargin=\parindent]
+            \item Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
+%            \item Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
+%            \item Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
+%automated job launch and data analysis in python
             \item Led laboratory exercises and tutored at-risk students individually. Communicated detailed concepts to audiences with varied technical backgrounds.
             \item Coordinated between professors, graduate teaching assistants, and undergraduate tutors as Head TA. Coached new team members to improve student outcomes.
         \end{itemize}
-
 \end{itemize}
 
-% ======================================================================
+% ----------------------------------------------------------------------
 
 \ResumeSection{Education}
 
 \begin{itemize}[leftmargin=\parindent]
     \parskip=0.1em
+    \itemsep=1.2em
 
     \item[]
         \headerrow
-            { \textbf{University of Minnesota} }
-            { \textbf{Minneapolis, MN} }
-        \headerrow
-            { \emph{PhD, Space Physics, Burlaga/Arctowski Medal Fellow} }
-            { \emph{ \YearRange{2009}{2016} } }
-
-    \vspace{-10pt}
-
+            {PhD}
+            {University of Minnesota}
+            {\YearRange{2009}{2016}}
+        \begin{itemize}[leftmargin=\parindent]
+            \item Space physics, Burlaga/Arctowski Medal Fellow
+        \end{itemize}
+%    \vspace{-10pt}
     \item[]
         \headerrow
-            { \textbf{St Olaf College} }
-            { \textbf{Northfield, MN} }
-        \headerrow
-            { \emph{BA, Math (Distinction), Physics (Distinction),
-                 Magna Cum Laude} }
-            { \emph{ \YearRange{2005}{2009} } }
-
+            {BA}
+            {St Olaf College}
+            {\YearRange{2005}{2009}}
+        \begin{itemize}[leftmargin=\parindent]
+            \item Math (Distinction), Physics (Distinction),
+                 Magna Cum Laude
+        \end{itemize}
 \end{itemize}
 
-% ======================================================================
+% ----------------------------------------------------------------------
 
 \end{document}
