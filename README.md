@@ -5,7 +5,7 @@ A snazzy resume template, written in LaTeX! The LaTeX compiler and packages are 
 
 # Usage
 
-Open up `resume.tex` in the editor of your choice and swap out my information for yours. Then hit:
+Open up `resume.tex` in the editor of your choice and swap out my information for yours. Then fire up your shell, navigate to this directory, and run:
 
 ```
 make
