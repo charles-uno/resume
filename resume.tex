@@ -1,3 +1,4 @@
+
 % Charles McEachern
 % Adapted from work by Alex Gude.
 
@@ -9,14 +10,9 @@
 \addtolength{\topmargin}{-0.25in}
 % Reduce padding on the edges of nested lists.
 \setlength{\tabcolsep}{0em}
-
 % Disable page numbering.
 \pagestyle{empty}
 
-% Set the font used by the document. This line has to be commented out
-% sometimes -- I think this particular font isn't available for ARM
-% processors (such as the one in my Chromebook).
-%\usepackage{tgpagella}
 % Allow colored text.
 \usepackage[usenames, dvipsnames]{xcolor}
 % Allow hyperlinks, and prevent LaTeX from drawing boxes around them.
@@ -29,11 +25,8 @@
 \usepackage{enumitem}
 % Add \widthof for better indentation handling.
 \usepackage{calc}
-
-%\usepackage{svg}
+% For the PDF icons. SVG handling is bugged on OSX.
 \usepackage{graphicx}
-
-\usepackage{floatrow}
 
 % ======================================================================
 
@@ -61,7 +54,7 @@
 % Retouch the plusses to get "C++" to look nice.
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
 
-% Finagle with the icon spacing instead of bullets.
+% Finagle with icon spacing.
 \newcommand{\hbump}{\hspace{0.4in}}
 \newcommand{\hbmp}{\hspace{0.02in}}
 \newcommand{\iconsize}{8px}
@@ -71,12 +64,6 @@
 \begin{document}
 
 % ----------------------------------------------------------------------
-
-% The header would be an appropriate place to put a link to LinkedIn --
-% or, even better, GitHub. I chose to instead link to my own website
-% (which itself has a prominent links to my LinkedIn account and several
-% projects on GitHub). This is mostly to show off my basic knowledge of
-% HTML/CSS and Javascript.
 
 \begin{center}
     { \huge \textbf{Charles McEachern} }
@@ -103,14 +90,11 @@
 
 \ResumeSection{Summary}
 
-Ten years experience using Python for automation and analysis. Fluent in Linux and shell scripting. Recent emphasis on CI/CD infrastructure with Groovy, Jenkins, and Docker. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
+Ten years experience with automation and analysis in Python. Fluent in Linux and shell scripting. Recent emphasis on CI/CD/CT infrastructure with Jenkins, Docker, and RPMs. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
 
-%Hobby projects involving Go, Javascript, and microcontrollers.
+% Hobby projects involving Go, Javascript, and microcontrollers.
 
 % take ownership of multi-framework projects
-
-% NOTE -- Previous versions instead listed languages and skills. Check
-% back in the Git history to see that.
 
 % ----------------------------------------------------------------------
 
@@ -121,42 +105,52 @@ Ten years experience using Python for automation and analysis. Fluent in Linux a
     \itemsep=1.2em
     \item[]
         \headerrow
-            {Software Engineer}
+            {Intern $\to$ Test Engineer $\to$ DevOps Engineer}
             {Cray Inc}
-            {\YearRange{2016}{Present}}
+            {\YearRange{2014}{Present}}
         \begin{itemize}[leftmargin=\parindent]
-            \item Built a \textbf{CI/CD} pipeline using \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and distributed \textbf{RPMs} on commit in support of 20 engineers.
-            \item Triggered \textbf{Jenkins} builds via \textbf{REST API}. Monitored the queue and throttled job submissions to run 50 multithreaded jobs without stalling a standalone build server.
+            \item Built a \textbf{Continuous Integration} pipeline with \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and deployed \textbf{RPMs} in support of 100+ engineers.
+            \item Deployed polished examples in \textbf{\CPP}, \textbf{Go}, and \textbf{Python} to illustrate pipeline best practices.
+%            \item Deployed polished example repos for \textbf{\CPP}, \textbf{Go}, and \textbf{Python} to illustrate pipeline best practices. Fielded questions from 100+ developers about \textbf{Continuous Testing}.
+            \item Something something \textbf{REST APIs}
+
+%            \item Scraped and parsed mainframe logs to identify anomalous boot behavior in real time.
+
+%            \item Triggered \textbf{Jenkins} builds via \textbf{REST API}. Monitored the queue and throttled job submissions to run 50 multithreaded jobs without stalling a standalone build server.
 % Jenkins REST API -- triggered job launch, load balance / throttling, cleanup
 % Parsed out tests, assembled them into suites via the TestRail REST API
 %            \item Interfaced with \textbf{REST APIs} for BitBucket and \textbf{Jenkins} using \textbf{Python} scripts. Automated triggers and cleanup to eliminate hours of error-prone browser menus.
-%            \item Prepared and presented annotated templates to spur unit testing.
             \item Implemented a \textbf{Python} API for access and analysis of mainframe system logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 % Cori has 12k+ nodes
 %            \item Implemented a \textbf{Python} API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
 %            \item Exported and analyzed mainframe logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
 %            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
             \item Mentored two interns, both of whom were awarded extensions. Prepared and presented educational materials to onboard dozens of new employees.
+%            \item Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
+%            \item Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing.
+
         \end{itemize}
+
     \item[]
         \headerrow
-            {Performance Intern}
-            {Cray Inc}
-            {\YearRange{2014}{2015}}
+            {Volunteer Powerlifting Coach}
+            {Special Olympics Minnesota}
+            {\YearRange{2018}{Present}}
         \begin{itemize}[leftmargin=\parindent]
-            \item Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
-            \item Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing. Increased test code coverage dramatically.
-%            \item Tailored test cases to the needs of the performance tools team. Responded promptly to feedback.
+            \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Implemented a \textbf{Python} harness to configure, compile, and launch hundreds of variations at once.
+            \item Analyzed hundreds of gigabytes of data with \textbf{Numpy} and \textbf{Matplotlib} to isolate novel patterns.
         \end{itemize}
+
+
     \item[]
         \headerrow
-            {PhD Candidate}
+            {Teaching Assistant $\to$ Research Assistant}
             {University of Minnesota}
             {\YearRange{2009}{2016}}
         \begin{itemize}[leftmargin=\parindent]
 %            \item Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
             \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Implemented a \textbf{Python} harness to configure, compile, and launch hundreds of variations at once.
-            \item Analyzed and visualized hundreds of gigabytes of data with \textbf{Numpy} and \textbf{Matplotlib} to identify novel patterns. Presented methods and results via posters, papers, and workships.
+            \item Analyzed hundreds of gigabytes of data with \textbf{Numpy} and \textbf{Matplotlib} to isolate novel patterns.
 %            \item Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 %            \item Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
 %automated job launch and data analysis in python
@@ -164,6 +158,7 @@ Ten years experience using Python for automation and analysis. Fluent in Linux a
 %Communicated detailed concepts to audiences with varied technical backgrounds.
 %Coached new team members to improve student outcomes.
         \end{itemize}
+
 \end{itemize}
 
 % ----------------------------------------------------------------------
@@ -182,7 +177,6 @@ Ten years experience using Python for automation and analysis. Fluent in Linux a
         \begin{itemize}[leftmargin=\parindent]
             \item Space physics, Burlaga/Arctowski Medal Fellow
         \end{itemize}
-%    \vspace{-10pt}
     \item[]
         \headerrow
             {BA}
