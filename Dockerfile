@@ -1,23 +1,14 @@
 
-from opensuse
+FROM ubuntu:16.04
 
-RUN zypper install -y \
-    ImageMagick \
-    inkscape \
-    make \
-    man \
-    vim \
-    which
+RUN apt-get update
 
-RUN zypper install -y \
-    texlive-enumitem \
-    texlive-floatrow \
-    texlive-import \
-    texlive-latex \
-    texlive-latexmk \
-    texlive-subfig \
-    texlive-svg \
-    texlive-tex-gyre \
-    texlive-ulem
+# Avoid prompt for time zone info.
+ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+RUN apt-get install -y make texlive-full
 
 CMD ["/bin/bash"]

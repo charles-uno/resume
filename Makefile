@@ -7,22 +7,25 @@ MOUNT := /sandbox
 
 # ======================================================================
 
-.PHONY: all
-all: image resume.tex
-	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) $(IMAGE) make --directory=$(MOUNT) --file=$(MOUNT)/Makefile resume.pdf
+.PHONY: all image debug resume
 
-# ======================================================================
+all: resume
 
-.PHONY: image
+resume: image
+	rm *.pdf ||:
+	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make resume.pdf
+
+resume.pdf: 
+	latexmk -pdf resume.tex -halt-on-error --shell-escape
+	latexmk -c resume.tex
+
 image: Dockerfile
 	docker build . -f Dockerfile -t $(IMAGE)
 
 # ======================================================================
 
-resume.pdf: resume.tex Makefile
-	rm *.pdf ||:
-	latexmk -pdf resume.tex -halt-on-error --shell-escape
-	latexmk -c resume.tex
+debug: image
+	docker run -it --rm $(IMAGE)
 
 # ======================================================================
 
