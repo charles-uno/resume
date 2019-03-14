@@ -1,17 +1,16 @@
 
-% Charles McEachern
+% Charles Fyfe
 % Adapted from work by Alex Gude.
 
-% ======================================================================
+% ----------------------------------------------------------------------
 
-% Set the size and shape of the document.
 \documentclass[12pt,letterpaper]{article}
 \usepackage[letterpaper, margin=0.8in, bottom=0.5in]{geometry}
 \addtolength{\topmargin}{-0.25in}
+\pagestyle{empty}
+
 % Reduce padding on the edges of nested lists.
 \setlength{\tabcolsep}{0em}
-% Disable page numbering.
-\pagestyle{empty}
 
 % Allow colored text.
 \usepackage[usenames, dvipsnames]{xcolor}
@@ -23,17 +22,15 @@
 \usepackage[normalem]{ulem}
 % Allow additional formatting of lists.
 \usepackage{enumitem}
-% Add \widthof for better indentation handling.
-\usepackage{calc}
 % For the PDF icons. SVG handling is bugged on OSX.
 \usepackage{graphicx}
 
 
-\usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{multirow}
 
 
-% ======================================================================
+% ----------------------------------------------------------------------
 
 % Left-align the first argument and right-align the second.
 \newcommand{\headerpair}[2]{
@@ -41,16 +38,14 @@
     \end{tabular*}
 }
 
-% Left-align, center, right-align.
-\newcommand{\headertriple}[3]{
-    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r} {\large\emph{#1}} & {\large\emph{#2}} & {\large\emph{#3}}
-    \end{tabular*}
-}
 
-\newcommand{\floatfour}[4]{#1\hfill#2\hfill#3\hfill#4\hfill}
 
-% Switch this up if you can't decide.
-\newcommand{\headerrow}[3]{\headerpair{#1, #2}{#3}}
+\newcommand{\fourfloat}[4]{ {#1}\hfill{#2}\hfill{#3}\hfill{#4} }
+
+
+
+
+\newcommand{\headerrow}[3]{\headerpair{#2: #1}{#3}}
 
 % Format the dash in a year range nicely.
 \newcommand{\YearRange}[2]{#1--#2}
@@ -68,14 +63,8 @@
 
 \newcommand{\emailtag}{\includegraphics[height=\iconsize]{icons/envelope-regular.pdf} \hbmp \href{mailto:ch@rles.uno}{ch@rles.uno}}
 \newcommand{\webtag}{\includegraphics[height=\iconsize]{icons/link-solid.pdf} \hbmp \href{www.charles.uno}{charles.uno}}
-\newcommand{\phonetag}{\includegraphics[height=\iconsize]{icons/phone-solid.pdf} \hbmp \href{tel:+16512699245}{651-269-9245}}
+\newcommand{\phonetag}{\includegraphics[height=\iconsize]{icons/phone-solid.pdf} \hbmp \href{tel:+16512699245}{(651) 269-9245}}
 \newcommand{\citytag}{\includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf} \hbmp Minneapolis, MN}
-
-
-
-% ======================================================================
-
-\begin{document}
 
 
 
@@ -126,38 +115,65 @@
 
 % ----------------------------------------------------------------------
 
+\begin{document}
+
 \begin{center}
-    { \huge \textbf{Charles Fyfe} }
+
+    \fourfloat{\emailtag}{\webtag}{\phonetag}{\citytag}
 
     \vspace{12pt}
-    \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
-    \hbmp
-    \href{mailto:ch@rles.uno}{ch@rles.uno}
+    { \huge \textbf{Charles Fyfe} }
+    \vspace{12pt}
+
+    \vspace{12pt}
+    \emailtag
     \hbump
-    \includegraphics[height=\iconsize]{icons/link-solid.pdf}
-    \hbmp
-    \href{www.charles.uno}{charles.uno}
+    \webtag
     \hbump
-    \includegraphics[height=\iconsize]{icons/phone-solid.pdf}
-    \hbmp
-    \href{tel:+16512699245}{(651) 269-9245}
+    \phonetag
     \hbump
-    \includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf}
-    \hbmp
-    Minneapolis, MN
+    \citytag
+
 \end{center}
 
-% ----------------------------------------------------------------------
+
+%\begin{tabular*}{\linewidth}{l | c}
+%        { \huge \textbf{Charles Fyfe} } & { \emailtag \\ \webtag \\ \phonetag \\ \citytag }
+%\end{tabular*}
+
+\begin{tabular}{|c|c|c|}
+\hline
+Foo bar & \begin{tabular}[x]{@{}c@{}}Foo\\bar\end{tabular} & Foo bar \\
+\hline
+\end{tabular}
+
+\begin{tabularx}{\textwidth}{|l|X|}
+
+  \textbf{Symptom} & \textbf{Metric} \\
+\hline
+Class that has many accessor methods and accesses a lot of external data & ATFD is more than a few\\
+Class that is large and complex & WMC is high\\
+Class that has a lot of methods that only operate on a proper subset of the instance variable set & TCC is low\\
+\end{tabularx}
+
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|c|p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}p{1cm}|}
+\hline
+A & B & C & D & \multicolumn{7}{|c|}{F}  \\ \hline
+\multirow{ 2}{*}{1} & 0 & 6 & 230 & 35 & 40 & 55 & 25 & 40 & 35 & \\
+& 1 & 5 & 195 & 25 & 50 & 35 & 40 & 45 &  &  \\ \hline
+\end{tabular}
+\caption{A test caption}
+\label{table2}
+\end{table}
+
 
 \ResumeSection{Summary}
 
-Ten years experience with automation and analysis in Python. Fluent in Linux and shell scripting. Recent emphasis on CI/CD/CT infrastructure with Jenkins, Docker, and RPMs. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
-
-% Hobby projects involving Go, Javascript, and microcontrollers.
-
-% take ownership of multi-framework projects
-
-% ----------------------------------------------------------------------
+Ten years experience with automation and analysis in Python. Fluent in Linux and shell scripting. Recent emphasis on CI/CD/CT infrastructure with Jenkins and Docker. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
 
 \ResumeSection{Experience}
 
@@ -166,27 +182,34 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
     \itemsep=1.2em
     \item[]
         \headerrow
-            {Intern $\to$ Test Engineer $\to$ DevOps Engineer}
+            {Intern $\to$ Software Engineer $\to$ DevOps Engineer}
             {Cray Inc}
             {\YearRange{2014}{Present}}
         \begin{itemize}[leftmargin=\parindent]
             \item Built a \textbf{Continuous Integration} pipeline with \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and deployed \textbf{RPMs} in support of 100+ engineers.
-            \item Deployed polished examples in \textbf{\CPP}, \textbf{Go}, and \textbf{Python} to illustrate pipeline best practices.
+            \item Deployed polished examples in \textbf{\CPP}, \textbf{Go}, and \textbf{Python}.
+            \item Implemented a \textbf{Python} API for access and analysis of mainframe system logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
+            \item Mentored two interns, both of whom were awarded extensions. Prepared and presented educational materials to onboard dozens of new employees.
+            \item Presented tech forum and fielded questions from 100+ coworkers.
+            \item Automated interfaces with REST APIs for Jenkins, BitBucket, TestRail, and in-house applications.
+            \item Scraped and parsed mainframe logs to identify anomalous boot behavior in real time.
+
+            \item System status dashboard.
+            \item Rolled out a continuous testing solution for Cray's next-generation line of multi-OS mainframes. Fielded questions from 100+ developers.
+
+
+
+
+
 %            \item Deployed polished example repos for \textbf{\CPP}, \textbf{Go}, and \textbf{Python} to illustrate pipeline best practices. Fielded questions from 100+ developers about \textbf{Continuous Testing}.
-            \item Something something \textbf{REST APIs}
-
-%            \item Scraped and parsed mainframe logs to identify anomalous boot behavior in real time.
-
 %            \item Triggered \textbf{Jenkins} builds via \textbf{REST API}. Monitored the queue and throttled job submissions to run 50 multithreaded jobs without stalling a standalone build server.
 % Jenkins REST API -- triggered job launch, load balance / throttling, cleanup
 % Parsed out tests, assembled them into suites via the TestRail REST API
 %            \item Interfaced with \textbf{REST APIs} for BitBucket and \textbf{Jenkins} using \textbf{Python} scripts. Automated triggers and cleanup to eliminate hours of error-prone browser menus.
-            \item Implemented a \textbf{Python} API for access and analysis of mainframe system logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 % Cori has 12k+ nodes
 %            \item Implemented a \textbf{Python} API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
 %            \item Exported and analyzed mainframe logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
 %            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
-            \item Mentored two interns, both of whom were awarded extensions. Prepared and presented educational materials to onboard dozens of new employees.
 %            \item Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 %            \item Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing.
 
@@ -198,10 +221,9 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
             {Special Olympics Minnesota}
             {\YearRange{2018}{Present}}
         \begin{itemize}[leftmargin=\parindent]
-            \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Implemented a \textbf{Python} harness to configure, compile, and launch hundreds of variations at once.
-            \item Analyzed hundreds of gigabytes of data with \textbf{Numpy} and \textbf{Matplotlib} to isolate novel patterns.
+            \item Coordinated warm-ups, lifts, meals, and parent concerns during full-day Area and State meets.
+            \item Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
         \end{itemize}
-
 
     \item[]
         \headerrow
@@ -221,8 +243,6 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
         \end{itemize}
 
 \end{itemize}
-
-% ----------------------------------------------------------------------
 
 \ResumeSection{Education}
 
@@ -248,7 +268,5 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
                  Magna Cum Laude
         \end{itemize}
 \end{itemize}
-
-% ----------------------------------------------------------------------
 
 \end{document}
