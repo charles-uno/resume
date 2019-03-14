@@ -28,6 +28,11 @@
 % For the PDF icons. SVG handling is bugged on OSX.
 \usepackage{graphicx}
 
+
+\usepackage{multirow}
+\usepackage{tabularx}
+
+
 % ======================================================================
 
 % Left-align the first argument and right-align the second.
@@ -41,6 +46,8 @@
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r} {\large\emph{#1}} & {\large\emph{#2}} & {\large\emph{#3}}
     \end{tabular*}
 }
+
+\newcommand{\floatfour}[4]{#1\hfill#2\hfill#3\hfill#4\hfill}
 
 % Switch this up if you can't decide.
 \newcommand{\headerrow}[3]{\headerpair{#1, #2}{#3}}
@@ -59,14 +66,68 @@
 \newcommand{\hbmp}{\hspace{0.02in}}
 \newcommand{\iconsize}{8px}
 
+\newcommand{\emailtag}{\includegraphics[height=\iconsize]{icons/envelope-regular.pdf} \hbmp \href{mailto:ch@rles.uno}{ch@rles.uno}}
+\newcommand{\webtag}{\includegraphics[height=\iconsize]{icons/link-solid.pdf} \hbmp \href{www.charles.uno}{charles.uno}}
+\newcommand{\phonetag}{\includegraphics[height=\iconsize]{icons/phone-solid.pdf} \hbmp \href{tel:+16512699245}{651-269-9245}}
+\newcommand{\citytag}{\includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf} \hbmp Minneapolis, MN}
+
+
+
 % ======================================================================
 
 \begin{document}
 
+
+
+
+\begin{center}
+
+    \floatfour{\emailtag}{\webtag}{\phonetag}{\citytag}
+
+    \vspace{20pt}
+
+    { \huge \textbf{Charles Fyfe} }
+
+    \vspace{20pt}
+
+    \emailtag \hbump \webtag \hbump \phonetag \hbump \citytag
+
+    \vspace{20pt}
+
+\begin{tabular*}{\linewidth}{|c|@{\extracolsep{\fill}}l|}
+\hline
+    \multirow{4}{*}{ { \huge \textbf{Charles Fyfe} } } & \emailtag \\
+    & \webtag \\
+    & \phonetag \\
+    & \citytag \\
+\hline
+\end{tabular*}
+
+    \vspace{20pt}
+
+\begin{tabular}{|p{8cm}|p{6cm}|}
+\hline
+    \multirow{4}{*}{ { \huge \textbf{Charles Fyfe} } } & \emailtag \\
+    & \webtag \\
+    & \phonetag \\
+    & \citytag \\
+\hline
+\end{tabular}
+
+    \vspace{20pt}
+
+\end{center}
+
+
+
+
+
+
+
 % ----------------------------------------------------------------------
 
 \begin{center}
-    { \huge \textbf{Charles McEachern} }
+    { \huge \textbf{Charles Fyfe} }
 
     \vspace{12pt}
     \includegraphics[height=\iconsize]{icons/envelope-regular.pdf}
