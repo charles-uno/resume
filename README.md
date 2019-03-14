@@ -1,6 +1,7 @@
 
 # Synopsis
 
+
 A snazzy resume template, written in LaTeX! The LaTeX compiler and packages are all wrapped up in a Docker container for convenience.
 
 # Usage
