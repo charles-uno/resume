@@ -1,0 +1,72 @@
+
+% Charles Fyfe
+
+% Adapted from work by Alex Gude.
+
+% ----------------------------------------------------------------------
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage[letterpaper, top=0.55in]{geometry}
+\pagestyle{empty}
+\usepackage[parfill]{parskip}
+% Allow hyperlinks, and prevent LaTeX from drawing boxes around them.
+\usepackage[hidelinks]{hyperref}
+% For better handling of whitespace around macros.
+\usepackage{xspace}
+% For the PDF icons. SVG handling is bugged on OSX.
+\usepackage{graphicx}
+
+% ----------------------------------------------------------------------
+
+% Float four elements with fixed spacing between them.
+\newcommand{\floatfour}[4]{ {#1}\hbump{#2}\hbump{#3}\hbump{#4} }
+
+% Finagle with icon spacing.
+\newcommand{\hbump}{\hspace{0.4in}}
+\newcommand{\hbmp}{\hspace{0.02in}}
+\newcommand{\iconsize}{8px}
+
+\newcommand{\emailtag}{\includegraphics[height=\iconsize]{icons/envelope-regular.pdf} \hbmp \href{mailto:ch@rles.uno}{ch@rles.uno}}
+\newcommand{\webtag}{\includegraphics[height=\iconsize]{icons/link-solid.pdf} \hbmp \href{www.charles.uno}{charles.uno}}
+\newcommand{\phonetag}{\includegraphics[height=\iconsize]{icons/phone-solid.pdf} \hbmp \href{tel:+16512699245}{651-269-9245}}
+\newcommand{\citytag}{\includegraphics[height=\iconsize]{icons/map-marker-alt-solid.pdf} \hbmp Minneapolis}
+
+% ----------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center}
+
+    { \huge \textbf{Charles Fyfe} }
+
+    \vspace{4pt}
+
+    \floatfour{\emailtag}{\webtag}{\phonetag}{\citytag}
+
+    \vspace{-4pt}
+
+    \rule{\textwidth}{0.5pt}
+
+    \vspace{24pt}
+
+\end{center}
+
+% ----------------------------------------------------------------------
+
+Dear Jason,
+
+Three years ago, I left academia for software engineering. Full-time research wasn't a good fit, and neither was the prospect of relocating to chase faculty positions. The hard part was giving up teaching after ten-plus semesters of pre-med physics, musical acoustics, and even ballroom dance.
+
+Since then, I've pursued mentorship and outreach at every opportunity. This is my third summer mentoring an intern at Cray. I've presented hour-long tech forums to introduce hundreds of my peers to new technologies. Over the winter, I spent my Saturdays volunteer-coaching a Special Olympics powerlifting team. These experiences have left me restless for more, which is why I'm excited to apply to teach at St Olaf.
+
+I believe my unusual career path would be an asset to the department. If my year was any indication, at least a third of physics majors end up writing software. I've got plenty of experience to share as far as internships, recruiters, and technologies -- not to mention career path uncertainty!
+
+I look forward to hearing from you.
+
+Sincerely,
+
+Charles
+
+% ----------------------------------------------------------------------
+
+\end{document}

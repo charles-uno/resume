@@ -11,13 +11,9 @@ MOUNT := /workspace
 
 all: resume
 
-resume: image resume.tex
-	rm *.pdf ||:
-	docker run --rm -v $(PWD):$(MOUNT) -w $(MOUNT) $(IMAGE) make resume.pdf
-
-resume.pdf:
-	latexmk -pdf resume.tex -halt-on-error --shell-escape
-	latexmk -c resume.tex
+%.pdf : %.tex image
+	docker run --rm -v $(PWD):$(MOUNT) -w $(MOUNT) $(IMAGE) latexmk -pdf $< -halt-on-error --shell-escape
+	docker run --rm -v $(PWD):$(MOUNT) -w $(MOUNT) $(IMAGE) latexmk -c $<
 
 image: Dockerfile
 	docker build . -f Dockerfile -t $(IMAGE)
