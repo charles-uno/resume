@@ -13,6 +13,15 @@
 % Reduce padding on the edges of nested lists.
 \setlength{\tabcolsep}{0em}
 
+
+\usepackage{footmisc}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{1}
+
+
+
+% mathbb in paper title
+\usepackage{amsfonts}
 % Allow colored text.
 \usepackage[usenames, dvipsnames]{xcolor}
 % Allow hyperlinks, and prevent LaTeX from drawing boxes around them.
@@ -73,10 +82,6 @@
 
 % ----------------------------------------------------------------------
 
-\ResumeSection{Summary}
-
-Ten years automation and analysis in Python. Fluent in Linux and shell scripting. Recent emphasis on CI/CD/CT infrastructure with Jenkins, Docker, and REST APIs. Comfortable mentoring interns, onboarding employees, and creating educational materials for new technologies.
-
 \ResumeSection{Experience}
 
 \begin{itemize}[leftmargin=\parindent]
@@ -92,14 +97,13 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 
             \item Rolled out a Continuous Testing solution for the Shasta product line. Secured VP buy-in, introduced requirements to 100+ engineers, and followed up face-to-face.
 
-            \item TECH LEAD
-
+            \item Configured and upgraded a 200-node mainframe for a team of 20 test engineers. Prepared educational materials to onboard dozens of new employees to Cray software and hardware.
 
 %            \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs in support of 100+ engineers.
 
 %            \item Illustrated pipeline usage with an annotated end-to-end example: a \textbf{REST API} written in \textbf{Go}, wrapped in a \textbf{Docker} container, and deployed to \textbf{Kubernetes} via \textbf{Ansible}.
 
-            \item Developed pipeline automation to automatically build, test, and deploy software. Created annotated end-to-end examples to help employees transition into the modernized workflow.
+            \item Led development of a pipeline to automatically build, test, and deploy software. Created annotated end-to-end examples to help employees transition into the modernized workflow.
 
             \item Mentored two interns, both of whom were awarded extensions.
 
@@ -111,18 +115,11 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 
 %            \item Implemented a Python API for access and analysis of mainframe system logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 
-            \item Parsed mainframe logs to flag hardware failures on in-house machines as well as on a \$70 million customer installation. Presented methods and results to 50+ peers.
+            \item Parsed system logs to isolate failures on in-house machines and on a \$70 million customer installation. Summarized implementation and outcome for an audience of 50+ engineers. 
 
 %            \item Prepared and presented educational materials to onboard dozens of new employees.
 
 % Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
-
-
-
-
-
-
-
 
 
 % CT stack: RPM build pipeline, teaching developers how to write/package tests, detecting and executing tests, sending results to ELK, notifying product owners of failures, aggregating health on a dashboard
@@ -161,10 +158,9 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
             \itemsep=0.3em
 
             \item Modeled ultra low frequency Alfve\'n waves in the inner magnetosphere. Considered ring current enhancement as a novel simulation driver.
-
 %            \item Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 %            \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Implemented a \textbf{Python} harness to configure, compile, and launch hundreds of simulations in parallel.
-            \item Analyzed hundreds of gigabytes of data to isolate novel patterns.
+            \item Analyzed hundreds of gigabytes of data to isolate novel patterns. Shared methods and results via posters, papers, and workshops.
 %            \item Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 %            \item Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
 %automated job launch and data analysis in python
@@ -177,7 +173,7 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 
 % ----------------------------------------------------------------------
 
-\ResumeSection{Community Engagement}
+\ResumeSection{Volunteering}
 
 \begin{itemize}[leftmargin=\parindent]
     \parskip=0.1em
@@ -219,7 +215,8 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
             {University of Minnesota}
             {2009--2016}
         \begin{itemize}[leftmargin=\parindent]
-            \item Space physics, Burlaga/Arctowski Medal Fellow
+            \item Space physics, Burlaga/Arctowski Medal Fellow. Advisor: Bob Lysak
+
         \end{itemize}
     \item[]
         \headerrow
@@ -227,8 +224,32 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
             {St Olaf College}
             {2005--2009}
         \begin{itemize}[leftmargin=\parindent]
-            \item Math (Distinction), Physics (Distinction), Magna Cum Laude
+            \item Math (Distinction), Physics (Distinction), Magna Cum Laude. Advisor: Amy Kolan
         \end{itemize}
 \end{itemize}
+
+% ----------------------------------------------------------------------
+
+\ResumeSection{Publications}
+
+\begin{itemize}[leftmargin=\parindent]
+    \parskip=0.1em
+    \itemsep=1.2em
+
+    \item \href{http://hdl.handle.net/11299/181780}{McEachern, C.\footnotemark[1] (2016). Modeling Pc4 Pulsations in Two and a Half Dimensions with Comparisons to Van Allen Probes Observations. University of Minnesota Digital Conservancy}.
+    \item \href{http://e.ijpam.eu/contents/articles/201300604003.pdf}{McEachern, C.\footnotemark[1] (2013). Computational Solutions to the Ripple Problem in Large Magic Decks. International Electronic Journal of Pure and Applied Mathematics, 6(4), 229-234.}
+    \item \href{https://doi.org/10.1016/j.dam.2011.04.022}{Garrett, K. C., McEachern, C.\footnotemark[1], Frederick, T., and Hall-Holt, O. (2011). Fast computation of Andrews’ smallest part statistic and conjectured congruences. Discrete Applied Mathematics, 159(13), 1377-1380.}
+    \item \href{http://e.ijpam.eu/contents/articles/201100303004.pdf}{McEachern, C.\footnotemark[1] (2011). Applying Linear Lebesgue Density to $\mathbb{R}^{n+1}$ with Concentric $n$-Spheres. International Electronic Journal of Pure and Applied Mathematics, 3(3), 217-222.}
+    \item \href{https://www.sciencedirect.com/science/article/abs/pii/S0022285208001872}{Cederberg, J., Randolph, J., McDonald, B., Paulson, B., McEachern, C.\footnotemark[1] (2008). Hyperfine spectra of KBr and KI. Journal of Molecular Spectroscopy. 250. 114-116. 10.1016/j.jms.2008.05.005.}
+
+\end{itemize}
+
+\footnotetext{Previous name}
+
+
+
+
+
+
 
 \end{document}
