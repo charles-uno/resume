@@ -15,10 +15,6 @@ resume: image
 	rm *.pdf ||:
 	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make resume.pdf
 
-resume.pdf:
-	latexmk -pdf resume.tex -halt-on-error --shell-escape
-	latexmk -c resume.tex
-
 image: Dockerfile
 	docker build . -f Dockerfile -t $(IMAGE)
 
@@ -26,6 +22,10 @@ resume.pdf: resume.tex
 	rm *.pdf ||:
 	latexmk -pdf resume.tex -halt-on-error --shell-escape
 	latexmk -c resume.tex
+
+# Make directly on the local machine. Assumes texlive is already installed.
+metal:
+	latexmk -pdf resume.tex -halt-on-error --shell-escape
 
 # ----------------------------------------------------------------------
 

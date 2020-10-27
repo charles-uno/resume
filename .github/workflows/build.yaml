@@ -1,0 +1,17 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install texlive
+      run: sudo apt-get install texlive-full
+    - name: Build the Thesis
+      run: make metal
+    - uses: actions/upload-artifact@master
+      with:
+        name: Resume
+        path: ./resume.pdf

@@ -12,6 +12,24 @@
 % Reduce padding on the edges of nested lists.
 \setlength{\tabcolsep}{0em}
 
+%\usepackage{tgadventor}
+
+%\usepackage{fetamont}
+%\usepackage[T1]{fontenc}
+
+\usepackage{ocr}
+\usepackage[T1]{fontenc}
+% Needs {\ocrfamily foobar}
+
+% Fun font, but probably not appropriate:
+% https://www.tug.org/FontCatalogue/augie/
+
+% The emerald package has a lot of fun fonts. Doesn't play nicely with overleaf though.
+
+
+% \renewcommand*\familydefault{\sfdefault} % sets the document default font to the sans serif default
+
+
 % Allow colored text.
 \usepackage[usenames, dvipsnames]{xcolor}
 % Allow hyperlinks, and prevent LaTeX from drawing boxes around them.
@@ -43,8 +61,10 @@
 \newcommand{\floatfour}[4]{ {#1}\hbump{#2}\hbump{#3}\hbump{#4} }
 
 
-% Section header, colored, and with a line extending to the right edge.
-\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}#1 \sout{\hfill}}}}
+% Section header, colored, and with a line extending to the right edge. Sans serif font
+% \newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} \textsf{#1} \sout{\hfill}}}}
+
+\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} {\ocrfamily #1} \sout{\hfill}}}}
 
 % Retouch the plusses to get "C++" to look nice.
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
@@ -75,7 +95,15 @@
 
 \ResumeSection{Summary}
 
-Ten years automation and analysis in Python. Fluent in Linux and shell scripting. Recent emphasis on DevOps and CI/CD/CT using Jenkins, Docker, and REST APIs. Comfortable mentoring interns, onboarding employees, and evangelizing new technologies.
+Ten years automation and analysis in Python.
+Fluent in Linux and shell scripting.
+Recent emphasis on DevOps and CI/CD/CT using Jenkins, Docker, and REST APIs.
+Comfortable mentoring interns, onboarding employees, and evangelizing new technologies.
+
+{\ocrfamily
+Something something leadership/education/outreach
+}
+
 
 \ResumeSection{Experience}
 
@@ -84,7 +112,7 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 %    \itemsep=1.2em
     \item[]
         \headerrow
-            {Intern $\to$ Engineer 3 $\to$ Engineer 4}
+            {Intern $\to$ Engineer 3 $\to$ Engineer 4 $\to$ Specialist 5}
             {Cray Inc}
             {2014--Present}
         \begin{itemize}[leftmargin=\parindent]
@@ -94,6 +122,8 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
             \item Designed a \textbf{Bash}/\textbf{Python} framework to execute tests on live mainframes. Ingested results into an \textbf{ELK} database. Forwarded failures to product owners on Slack via \textbf{REST API}.
 
             \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs and Docker images in support of 100+ engineers. Illustrated pipeline best practices with annotated end-to-end examples.
+
+            \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs in support of 100+ engineers.
 
             \item Crawled the \textbf{Jenkins REST API} to monitor deployments of 6 products across 27 mainframes. Aggregated metrics onto an \textbf{nginx}/\textbf{uWSGI} dashboard accessed 100+ times daily.
 
@@ -163,6 +193,23 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 
 % incremental progress
 
+        \end{itemize}
+
+
+
+    \item[]
+        \headerrow
+            {Assistant Adjunct Professor of Physics}
+            {St Olaf College}
+            {2020--Present}
+        \begin{itemize}[leftmargin=\parindent]
+
+            \item Developed and delivered curriculum.
+            \item Classical mechanics is less about physics and more about developing new analytical and numerical tools.
+            \item Pivoted from in-person learning to
+
+
+%            \item Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
 
         \end{itemize}
 
@@ -179,7 +226,11 @@ Ten years automation and analysis in Python. Fluent in Linux and shell scripting
 %            \item Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 %            \item Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
 %automated job launch and data analysis in python
+
             \item Led laboratory exercises and tutored at-risk students individually. Coordinated between professors, graduate teaching assistants, and undergraduate tutors as Head TA.
+
+            \item Coordinated between professors, teaching assistants, and tutors as Head TA.
+
 %Communicated detailed concepts to audiences with varied technical backgrounds.
 %Coached new team members to improve student outcomes.
         \end{itemize}
