@@ -10,12 +10,17 @@
 \pagestyle{empty}
 
 % Reduce padding on the edges of nested lists.
-\setlength{\tabcolsep}{0em}
+%\setlength{\tabcolsep}{0em}
+
+\usepackage{parskip}
 
 %\usepackage{tgadventor}
 
 %\usepackage{fetamont}
 %\usepackage[T1]{fontenc}
+
+
+\usepackage{multicol}
 
 \usepackage{ocr}
 \usepackage[T1]{fontenc}
@@ -39,13 +44,12 @@
 % Add \sout, used to add rules to header lines.
 \usepackage[normalem]{ulem}
 % Allow additional formatting of lists.
-\usepackage{enumitem}
+%\usepackage{enumitem}
 % For the PDF icons. SVG handling is bugged on OSX.
 \usepackage{graphicx}
 
-
-\usepackage{tabularx}
-\usepackage{multirow}
+%\usepackage{tabularx}
+%\usepackage{multirow}
 
 
 % ----------------------------------------------------------------------
@@ -84,13 +88,11 @@
 \begin{document}
 
 \begin{center}
-    { \huge \textbf{Charles Fyfe} }
+    {\huge \textbf{Charles Fyfe}}
 
     \vspace{12pt}
 
     \floatfour{\emailtag}{\webtag}{\phonetag}{\citytag}
-%    \fourfloat{\emailtag}{\webtag}{\phonetag}{\citytag}
-%    \vspace{12pt}
 \end{center}
 
 \ResumeSection{Summary}
@@ -107,29 +109,19 @@ Something something leadership/education/outreach
 
 \ResumeSection{Experience}
 
-\begin{itemize}[leftmargin=\parindent]
-%    \parskip=0.3em
-%    \itemsep=1.2em
-    \item[]
-        \headerrow
-            {Intern $\to$ Engineer 3 $\to$ Engineer 4 $\to$ Specialist 5}
-            {Cray Inc}
-            {2014--Present}
-        \begin{itemize}[leftmargin=\parindent]
+\headerrow
+    {Intern $\to$ Engineer 3 $\to$ Engineer 4 $\to$ Specialist 5}
+    {Cray Inc}
+    {2014--Present}
+\begin{itemize}
+    \item Rolled out a \textbf{Continuous Testing} solution for the Shasta product line. Secured VP buy-in, communicated requirements to dozens of product groups, and followed up on concerns.
+    \item Designed a \textbf{Bash}/\textbf{Python} framework to execute tests on live mainframes. Ingested results into an \textbf{ELK} database. Forwarded failures to product owners on Slack via \textbf{REST API}.
+    \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs and Docker images in support of 100+ engineers. Illustrated pipeline best practices with annotated end-to-end examples.
+    \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs in support of 100+ engineers.
+    \item Crawled the \textbf{Jenkins REST API} to monitor deployments of 6 products across 27 mainframes. Aggregated metrics onto an \textbf{nginx}/\textbf{uWSGI} dashboard accessed 100+ times daily.
+    \item Mentored three interns, two of whom were awarded extensions.
+    \item Implemented a \textbf{Python} API for access and analysis of mainframe logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 
-            \item Rolled out a \textbf{Continuous Testing} solution for the Shasta product line. Secured VP buy-in, communicated requirements to dozens of product groups, and followed up on concerns.
-
-            \item Designed a \textbf{Bash}/\textbf{Python} framework to execute tests on live mainframes. Ingested results into an \textbf{ELK} database. Forwarded failures to product owners on Slack via \textbf{REST API}.
-
-            \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs and Docker images in support of 100+ engineers. Illustrated pipeline best practices with annotated end-to-end examples.
-
-            \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs in support of 100+ engineers.
-
-            \item Crawled the \textbf{Jenkins REST API} to monitor deployments of 6 products across 27 mainframes. Aggregated metrics onto an \textbf{nginx}/\textbf{uWSGI} dashboard accessed 100+ times daily.
-
-            \item Mentored three interns, two of whom were awarded extensions.
-
-            \item Implemented a \textbf{Python} API for access and analysis of mainframe logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 
 % Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
 
@@ -176,90 +168,92 @@ Something something leadership/education/outreach
 % Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 % Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing.
 
-        \end{itemize}
+\end{itemize}
 
-    \item[]
-        \headerrow
-            {Volunteer Powerlifting Coach}
-            {Special Olympics Minnesota}
-            {2018--Present}
-        \begin{itemize}[leftmargin=\parindent]
 
-            \item Adapted coaching strategies to each athlete's physical abilities and communication skills.
-
-            \item Coordinated warm-ups, meals, and parent concerns during full-day Area and State meets.
-
+\headerrow
+    {Volunteer Powerlifting Coach}
+    {Special Olympics Minnesota}
+    {2018--Present}
+\begin{itemize}
+    \item Adapted coaching strategies to each athlete's physical abilities and communication skills.
+    \item Coordinated warm-ups, meals, and parent concerns during full-day Area and State meets.
 %            \item Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
-
 % incremental progress
-
-        \end{itemize}
-
+\end{itemize}
 
 
-    \item[]
-        \headerrow
-            {Assistant Adjunct Professor of Physics}
-            {St Olaf College}
-            {2020--Present}
-        \begin{itemize}[leftmargin=\parindent]
+\headerrow
+    {Assistant Adjunct Professor of Physics}
+    {St Olaf College}
+    {2020--Present}
+\begin{itemize}
+    \item Developed and delivered curriculum.
+    \item Classical mechanics is less about physics and more about developing new analytical and numerical tools.
+    \item Pivoted from in-person learning to
+\end{itemize}
 
-            \item Developed and delivered curriculum.
-            \item Classical mechanics is less about physics and more about developing new analytical and numerical tools.
-            \item Pivoted from in-person learning to
 
-
-%            \item Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
-
-        \end{itemize}
-
-    \item[]
-        \headerrow
-            {PhD Candidate}
-            {University of Minnesota}
-            {2009--2016}
-        \begin{itemize}[leftmargin=\parindent]
+\headerrow
+    {PhD Candidate}
+    {University of Minnesota}
+    {2009--2016}
+\begin{itemize}
 %            \item Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
-            \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data with \textbf{Python} to isolate novel patterns.
+    \item Benchmarked and optimized a wave simulation in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data with \textbf{Python} to isolate novel patterns.
 
 % Considered anomalous ring current activity as a novel driving mechanism
 %            \item Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 %            \item Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
 %automated job launch and data analysis in python
 
-            \item Led laboratory exercises and tutored at-risk students individually. Coordinated between professors, graduate teaching assistants, and undergraduate tutors as Head TA.
-
-            \item Coordinated between professors, teaching assistants, and tutors as Head TA.
+    \item Led laboratory exercises and tutored at-risk students individually. Coordinated between professors, graduate teaching assistants, and undergraduate tutors as Head TA.
+    \item Coordinated between professors, teaching assistants, and tutors as Head TA.
 
 %Communicated detailed concepts to audiences with varied technical backgrounds.
 %Coached new team members to improve student outcomes.
-        \end{itemize}
+\end{itemize}
 
+
+\ResumeSection{Education}
+
+\headerrow
+    {PhD}
+    {University of Minnesota}
+    {2009--2016}
+\begin{itemize}
+    \item Space physics, Burlaga/Arctowski Medal Fellow
+\end{itemize}
+
+\headerrow
+    {BA}
+    {St Olaf College}
+    {2005--2009}
+\begin{itemize}
+    \item Math (Distinction), Physics (Distinction), Magna Cum Laude
 \end{itemize}
 
 \ResumeSection{Education}
 
-\begin{itemize}[leftmargin=\parindent]
-    \parskip=0.1em
-    \itemsep=1.2em
 
-    \item[]
-        \headerrow
-            {PhD}
-            {University of Minnesota}
-            {2009--2016}
-        \begin{itemize}[leftmargin=\parindent]
-            \item Space physics, Burlaga/Arctowski Medal Fellow
-        \end{itemize}
-    \item[]
-        \headerrow
-            {BA}
-            {St Olaf College}
-            {2005--2009}
-        \begin{itemize}[leftmargin=\parindent]
-            \item Math (Distinction), Physics (Distinction),
-                 Magna Cum Laude
-        \end{itemize}
+
+\setlength{\columnsep}{30pt}
+\begin{multicols}{2}
+
+\headerrow{University of Minnesota}{PhD}{2016}
+\begin{itemize}
+    \item Physics, Burlaga/Arctowski Medal
 \end{itemize}
+
+\columnbreak
+
+\headerrow{St Olaf College}{BA}{2009}
+\begin{itemize}
+    \item Math, Physics, Magna Cum Laude
+\end{itemize}
+
+\end{multicols}
+
+
 
 \end{document}
