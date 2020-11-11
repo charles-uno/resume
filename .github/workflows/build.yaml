@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install LaTeX
-      run: sudo apt-get install texlive-full
+      run: sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended latexmk
     - name: Compile
       run: make metal
     - uses: actions/upload-artifact@master
