@@ -25,11 +25,6 @@
 % For the PDF icons. SVG handling is bugged on OSX.
 \usepackage{graphicx}
 
-
-\usepackage{tabularx}
-\usepackage{multirow}
-
-
 % ----------------------------------------------------------------------
 
 % Left-align the first argument and right-align the second.
@@ -41,7 +36,6 @@
 
 \newcommand{\fourfloat}[4]{ {#1}\hfill{#2}\hfill{#3}\hfill{#4} }
 \newcommand{\floatfour}[4]{ {#1}\hbump{#2}\hbump{#3}\hbump{#4} }
-
 
 % Section header, colored, and with a line extending to the right edge.
 \newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}#1 \sout{\hfill}}}}
@@ -84,14 +78,14 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
 %    \itemsep=1.2em
     \item[]
         \headerrow
-            {Intern $\to$ Engineer 3 $\to$ Engineer 4}
+            {Intern $\to$ Engineer 3 $\to$ Engineer 4 $\to$ Specialist 5}
             {Cray Inc}
             {2014--Present}
         \begin{itemize}[leftmargin=\parindent]
 
             \item Rolled out a \textbf{Continuous Testing} solution for the Shasta product line. Secured VP buy-in, communicated requirements to dozens of product groups, and followed up on concerns.
 
-            \item Designed a \textbf{Bash}/\textbf{Python} framework to execute tests on live mainframes. Ingested results into an \textbf{ELK} database. Forwarded failures to product owners on Slack via \textbf{REST API}.
+            \item Designed a \textbf{Bash}/\textbf{Python} framework to execute tests on live mainframes. Ingested results into an \textbf{ELK} database. Forwarded failures to product owners on Slack and JIRA via \textbf{REST API}.
 
             \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs and Docker images in support of 100+ engineers. Illustrated pipeline best practices with annotated end-to-end examples.
 
@@ -101,10 +95,17 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
 
             \item Implemented a \textbf{Python} API for access and analysis of mainframe logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 
-% Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
+            \item Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
 
+            \item Illustrated pipeline usage with an annotated end-to-end example: a \textbf{REST API} written in \textbf{Go}, wrapped in a \textbf{Docker} container, and deployed to \textbf{Kubernetes} via \textbf{Ansible}.
 
-% Illustrated pipeline usage with an annotated end-to-end example: a \textbf{REST API} written in \textbf{Python}, wrapped in a \textbf{Docker} container, and deployed to \textbf{Kubernetes} via \textbf{Ansible}.
+            \item Crawled thousands of automated builds via BitBucket and Jenkins \textbf{REST APIs}. Validated pipeline changes against live use cases to avoid disrupting product streams
+
+            \item Built a CI/CD pipeline with \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and deployed \textbf{RPMs} in support of 100+ engineers.
+
+            \item Implemented a \textbf{Python} API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
+
+            \item Exported and analyzed mainframe logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing firmware bugs to be fixed in hours rather than days.
 
 % Finagled with a 350GB "blob" on VMs. Terraform.
 
@@ -115,19 +116,12 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
 % CT stack: RPM build pipeline, teaching developers how to write/package tests, detecting and executing tests, sending results to ELK, notifying product owners of failures, aggregating health on a dashboard
 
 % Cori has 12k+ nodes
-% Crawled thousands of repos via BitBucket's REST API. Validated pipeline changes against live use cases to avoid disrupting product streams
 % Triggered jobs via Jenkins REST API. Monitored the queue and throttled job submission to avoid deadlocking the build server
-% Auto-detected tests at build time and registered them withTestRail via REST API
+% Auto-detected tests at build time and registered them with TestRail via REST API
 % Aggregated hardware and software status onto a CGI dashboard
-% Mentored two interns, both of whom were awarded extensions.
 % Prepared and presented educational materials to onboard dozens of new employees.
-% Implemented a Python API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
-% Exported and analyzed mainframe logs for display in an ELK dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
 % Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 % Automated shell environment configuration, \CPP and Fortran source code generation, and performance report parsing.
-% Built a \textbf{Continuous Integration} pipeline with \textbf{Groovy}, \textbf{Docker}, and \textbf{shell} scripts. Automatically compiled, tested, and deployed \textbf{RPMs} in support of 100+ engineers.
-% Deployed polished examples in \textbf{\CPP}, \textbf{Go}, and \textbf{Python}.
-% Implemented a \textbf{Python} API for access and analysis of mainframe system logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 % Mentored two interns, both of whom were awarded extensions. Prepared and presented educational materials to onboard dozens of new employees.
 % Presented tech forum and fielded questions from 100+ coworkers.
 % Automated interfaces with REST APIs for Jenkins, BitBucket, TestRail, and in-house applications.
@@ -139,14 +133,25 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
 % Jenkins REST API -- triggered job launch, load balance / throttling, cleanup
 % Parsed out tests, assembled them into suites via the TestRail REST API
 % Interfaced with \textbf{REST APIs} for BitBucket and \textbf{Jenkins} using \textbf{Python} scripts. Automated triggers and cleanup to eliminate hours of error-prone browser menus.
-% Cori has 12k+ nodes
-% Implemented a \textbf{Python} API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
-% Exported and analyzed mainframe logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
-% Administered boots and upgrades for a 200-node Cray XC mainframe. Supported bizarre hardware and software configurations to maximize test coverage for a team of 20 engineers.
+
 % Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
+
 % Automated \textbf{shell} environment configuration, \textbf{\CPP} and \textbf{Fortran} source code generation, and performance report parsing.
 
         \end{itemize}
+
+
+    \item[]
+        \headerrow
+            {Adjunct Assistant Professor}
+            {St Olaf College}
+            {2020--Present}
+        \begin{itemize}[leftmargin=\parindent]
+
+            \item Something something online due to the pandemic
+
+        \end{itemize}
+
 
     \item[]
         \headerrow
@@ -210,5 +215,46 @@ Ten years experience with automation and analysis in Python. Fluent in Linux and
                  Magna Cum Laude
         \end{itemize}
 \end{itemize}
+
+
+
+
+
+\hrule
+
+\ResumeSection{Scratch Work}
+
+
+\section{Grad School Research}
+
+
+\section{Grad School Teaching}
+
+
+
+\section{Cabinet Cooling}
+
+
+
+\section{Log Scraping}
+
+
+
+
+\section{RPM Build Pipeline}
+
+
+
+\section{Shasta Testing}
+
+
+
+\section{Auto-Triage}
+
+
+\section{Shasta Dashboard}
+
+
+
 
 \end{document}
