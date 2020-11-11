@@ -22,3 +22,8 @@ Whenever you push a commit, GitHub Actions will pick up on the change and trigge
 Based on work by [Alex Gude](https://github.com/agude/resume).
 
 Icons come from [FontAwesome](https://fontawesome.com/) under [CC-BY 4.0](https://fontawesome.com/license).
+
+# Notes
+
+Looks like there's a bug inkscape/convert/mogrify as far as converting SVGs, at
+least on an OSX kernel. Weird. Converted on Ubuntu, add the PDFs to the repo.

@@ -22,15 +22,14 @@
 
 \usepackage{multicol}
 
-\usepackage{ocr}
-\usepackage[T1]{fontenc}
+%\usepackage{ocr}
+%\usepackage[T1]{fontenc}
 % Needs {\ocrfamily foobar}
 
 % Fun font, but probably not appropriate:
 % https://www.tug.org/FontCatalogue/augie/
 
 % The emerald package has a lot of fun fonts. Doesn't play nicely with overleaf though.
-
 
 % \renewcommand*\familydefault{\sfdefault} % sets the document default font to the sans serif default
 
@@ -66,9 +65,10 @@
 
 
 % Section header, colored, and with a line extending to the right edge. Sans serif font
-% \newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} \textsf{#1} \sout{\hfill}}}}
 
-\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} {\ocrfamily #1} \sout{\hfill}}}}
+\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} #1 \sout{\hfill}}}}
+% \newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} \textsf{#1} \sout{\hfill}}}}
+%\newcommand{\ResumeSection}[1]{\section*{{\color{MidnightBlue}\sout{\hfill} {\ocrfamily #1} \sout{\hfill}}}}
 
 % Retouch the plusses to get "C++" to look nice.
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}\xspace}
@@ -102,9 +102,9 @@ Fluent in Linux and shell scripting.
 Recent emphasis on DevOps and CI/CD/CT using Jenkins, Docker, and REST APIs.
 Comfortable mentoring interns, onboarding employees, and evangelizing new technologies.
 
-{\ocrfamily
-Something something leadership/education/outreach
-}
+%{\ocrfamily
+%Something something leadership/education/outreach
+%}
 
 
 \ResumeSection{Experience}

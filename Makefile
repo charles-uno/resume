@@ -1,39 +1,16 @@
-
-# Charles McEachern
-
-TODAY := `date +%Y%m%d`
 IMAGE := resume-build-env
-MOUNT := /sandbox
+MOUNT := /workdir
 
-# ----------------------------------------------------------------------
+.PHONY: all image refresh resume
 
-.PHONY: all image debug resume
-
-all: resume
+all: resume.pdf
 
 resume: image
 	rm *.pdf ||:
-	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) make resume.pdf
+	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) latexmk -pdf resume.tex -halt-on-error --shell-escape
 
 image: Dockerfile
 	docker build . -f Dockerfile -t $(IMAGE)
 
-resume.pdf: resume.tex
-	rm *.pdf ||:
-	latexmk -pdf resume.tex -halt-on-error --shell-escape
-	latexmk -c resume.tex
-
-# Make directly on the local machine. Assumes texlive is already installed.
-metal:
-	latexmk -pdf resume.tex -halt-on-error --shell-escape
-
-# ----------------------------------------------------------------------
-
-debug: image
-	docker run -it --rm $(IMAGE)
-
-# ----------------------------------------------------------------------
-
-# NOTE -- Looks like there's a bug in inkscape/convert/mogrify as far as
-# converting SVGs, at least on an OSX kernel. Weird. Converted on
-# Ubuntu, add the PDFs to the repo.
+refresh: Dockerfile
+	docker build . -f Dockerfile -t $(IMAGE) --no-cache

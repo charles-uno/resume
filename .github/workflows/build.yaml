@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install LaTeX
-      run: sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended latexmk
+    - name: Create Build Image
+      run: make image
     - name: Compile
-      run: make metal
+      run: make resume
     - uses: actions/upload-artifact@master
       with:
         name: Resume
