@@ -11,8 +11,16 @@ RUN apt-get install -y \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \
+    texlive-fonts-extra \
     texlive-pictures \
     texlive-science \
-    latexmk
+    latexmk \
+    wget
+
+# Install emerald fonts, not available via texlive
+RUN mkdir -p $(kpsewhich --var-value=TEXMFHOME)
+RUN wget http://mirror.ctan.org/fonts/emerald.zip && unzip emerald.zip
+RUN cp -r emerald/. $(kpsewhich --var-value=TEXMFHOME)
+RUN updmap -sys --enable Map emerald.map && texhash
 
 CMD ["/bin/bash"]
