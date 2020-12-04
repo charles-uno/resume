@@ -1,0 +1,41 @@
+
+
+\usepackage{enumitem}
+\usepackage[letterpaper, margin=0.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+% Add \sout, used to add rules to header lines.
+\usepackage[normalem]{ulem}
+\usepackage[usenames, dvipsnames]{xcolor}
+
+% Fancy font
+\usepackage{ocr}
+\newcommand{\fancy}[1]{\small{\ocrfamily{#1}}}
+
+% Finagle with the floating icons and contact info under the name
+\newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.5em}\fancy{#2}}
+\newcommand{\emailtag}{\tag{icons/envelope-regular.pdf}{\href{mailto:ch@rles.uno}{ch@rles.uno}}}
+\newcommand{\webtag}{\tag{icons/link-solid.pdf}{\href{www.charles.uno}{charles.uno}}}
+\newcommand{\phonetag}{\tag{icons/phone-solid.pdf}{\href{tel:+16512699245}{651-269-9245}}}
+\newcommand{\citytag}{\tag{icons/map-marker-alt-solid.pdf}{Minneapolis}}
+
+\newcommand{\Break}{{\color{Purple}\sout{\hfill}}}
+
+% Left-align the first argument and right-align the second.
+\newcommand{\headerpair}[2]{#1\hfill#2}
+\newcommand{\headerrow}[3]{\headerpair{\fancy{#1}}{\fancy{#2, #3}}}
+\newcommand{\years}[2]{{#1}-{#2}}
+
+\setlength{\parskip}{10pt}
+
+% Finagle with the spacing above and within a list
+\let\olditemize\itemize
+\let\endolditemize\enditemize
+\renewenvironment
+    {itemize}
+    {\vspace{-4pt}\begin{olditemize}[itemsep=3pt, parsep=0pt, topsep=0em]}
+    {\end{olditemize}}
+
+\newcommand{\then}{\hspace{0.3em}>\hspace{0.3em}}
+\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
