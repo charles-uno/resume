@@ -8,7 +8,6 @@
 % For splitting words in section names
 \usepackage{listofitems}
 \usepackage{parskip}
-\usepackage{titlesec}
 % Add \sout, used to add rules to header lines.
 \usepackage[normalem]{ulem}
 \usepackage[usenames, dvipsnames]{xcolor}
@@ -29,10 +28,10 @@
 % Redefine itemize to have a slight upward shift
 \let\olditemize\itemize
 \let\endolditemize\enditemize
-\renewenvironment{itemize}{\vspace{-10pt}\begin{olditemize}}{\end{olditemize}}
+\renewenvironment{itemize}{\vspace{-15pt}\begin{olditemize}}{\end{olditemize}\vspace{-7pt}}
 
 % Pandoc throws \tightlist in there automatically, so we'd better define it
-\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
 
 % Redefine line breaks to use our styling
 \renewcommand{\rule}[2]{{\color{Purple}\sout{\hfill}}}
@@ -40,11 +39,6 @@
 % Expect sections like "Foo @ Bar". Left-align Foo and right-align Bar.
 \setsepchar{@}
 \renewcommand{\section}[1]{\readlist*\elts{#1}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
-% Prevent weird spacing around sections
-\titlespacing{\section}{0pt}{\parskip}{-\parskip}
-
-
-
 
 \begin{document}
 
