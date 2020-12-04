@@ -1,0 +1,65 @@
+\documentclass[12pt,letterpaper]{article}
+\pagestyle{empty}
+
+\usepackage{enumitem}
+\usepackage[letterpaper, margin=0.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+% For splitting words in section names
+\usepackage{listofitems}
+\usepackage{parskip}
+\usepackage{titlesec}
+% Add \sout, used to add rules to header lines.
+\usepackage[normalem]{ulem}
+\usepackage[usenames, dvipsnames]{xcolor}
+
+\setlength{\parskip}{10pt}
+
+% Fancy font
+\usepackage{ocr}
+\newcommand{\fancy}[1]{\small{\ocrfamily{#1}}}
+
+% Finagle with the floating icons and contact info under the name
+\newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.5em}\fancy{#2}}
+\newcommand{\emailtag}{\tag{icons/envelope-regular.pdf}{\href{mailto:$email$}{$email$}}}
+\newcommand{\webtag}{\tag{icons/link-solid.pdf}{\href{$url$}{$url$}}}
+\newcommand{\phonetag}{\tag{icons/phone-solid.pdf}{\href{tel:$phone$}{$phone$}}}
+\newcommand{\citytag}{\tag{icons/map-marker-alt-solid.pdf}{$location$}}
+
+% Redefine itemize to have a slight upward shift
+\let\olditemize\itemize
+\let\endolditemize\enditemize
+\renewenvironment{itemize}{\vspace{-10pt}\begin{olditemize}}{\end{olditemize}}
+
+% Pandoc throws \tightlist in there automatically, so we'd better define it
+\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}}
+
+% Redefine line breaks to use our styling
+\renewcommand{\rule}[2]{{\color{Purple}\sout{\hfill}}}
+
+% Expect sections like "Foo @ Bar". Left-align Foo and right-align Bar.
+\setsepchar{@}
+\renewcommand{\section}[1]{\readlist*\elts{#1}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
+% Prevent weird spacing around sections
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+
+
+
+
+\begin{document}
+
+\begin{center}
+    {\huge $name$}
+
+    \vspace{8pt}
+
+    \emailtag\hfill\webtag\hfill\phonetag\hfill\citytag
+\end{center}
+
+% We redefine horizontal rules in a way that ignores the argument, but we might
+% as well keep them consistent.
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+$body$
+
+\end{document}

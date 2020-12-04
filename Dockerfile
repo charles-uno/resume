@@ -8,6 +8,7 @@ ENV LANGUAGE en_US.UTF-8
 
 RUN apt-get update
 RUN apt-get install -y \
+    pandoc \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-fonts-recommended \

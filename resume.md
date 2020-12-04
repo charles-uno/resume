@@ -1,44 +1,34 @@
-% Charles Fyfe
-% Adapted from work by Alex Gude.
-
-\documentclass[12pt,letterpaper]{article}
-\pagestyle{empty}
-\input{header.tex}
-
-\begin{document}
-
-\begin{center}
-    {\huge Charles Fyfe, PhD}
-
-    \vspace{8pt}
-
-    \emailtag\hfill\webtag\hfill\phonetag\hfill\citytag
-\end{center}
-
-\Break
+---
+name: Charles Fyfe, PhD
+email: ch@rles.uno
+url: charles.uno
+phone: 651-269-9245
+location: Minneapolis
+---
 
 Ten years automation and analysis in Python.
 Fluent in Linux and shell scripting.
 Familiar with CI/CD tools such as Jenkins, Docker, and REST APIs.
 
-%Comfortable mentoring interns, onboarding employees, and evangelizing new technologies.
+<!---
+Comfortable mentoring interns, onboarding employees, and evangelizing new technologies.
+-->
+
 Something something leadership/education/outreach
 
-\Break
+---
 
-\headerrow
-    {Intern{\then}Test Engineer{\then}DevOps Engineer}
-    {Cray Inc}
-    {\years{2014}{Present}}
-\begin{itemize}
-    \item Created a \textbf{Bash}/\textbf{Python} framework to automate testing on \textbf{Linux} supercomputers. Supported three development teams as they moved from quarterly release testing to continuous testing.
-    \item Built an auto-triage system to forward test failures to product owners on Slack and/or Jira via \textbf{REST API}, saving dozens of person-hours of manual triage daily.
-    \item Automated deployment of \textbf{Docker}-based services, including an \textbf{ELK} database and a \textbf{WSGI} dashboard. Enabled my team to iterate over dozens of commits per day in production-like environments.
-    \item Wrote a \textbf{Groovy} pipeline to build, test, and distribute RPMs in support of 100+ engineers.
-    \item Administered boots and upgrades for a 200-node \textbf{Linux} supercomputer in support of 20 engineers.
-    \item Implemented a parallel \textbf{Python} package for access and analysis of supercomputer logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
-    \item Scraped and parsed boot logs from thousands of nodes across six in-house supercomputers. Isolated performance regressions from firmware updates nightly, rather than weekly.
+# Intern > Test Engineer > DevOps Engineer @ Cray Inc, 2014-Present
 
+- Created a **Bash**/**Python** framework to automate testing on **Linux** supercomputers. Supported three development teams as they moved from quarterly release testing to continuous testing.
+- Built an auto-triage system to forward test failures to product owners on Slack and/or Jira via **REST API**, saving dozens of person-hours of manual triage daily.
+- Automated deployment of **Docker**-based services, including an **ELK** database and a **WSGI** dashboard. Enabled my team to iterate over dozens of commits per day in production-like environments.
+- Wrote a **Groovy** pipeline to build, test, and distribute RPMs in support of 100+ engineers.
+- Administered boots and upgrades for a 200-node **Linux** supercomputer in support of 20 engineers.
+- Implemented a parallel **Python** package for access and analysis of supercomputer logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
+- Scraped and parsed boot logs from thousands of nodes across six in-house supercomputers. Isolated performance regressions from firmware updates nightly, rather than weekly.
+
+<!---
 % Automatically provisioned a virtual  on commit for testing.
 % Crawled \textbf{Jenkins} via \textbf{REST API} to monitor the deployment of 6 products across 27 s. Aggregated metrics onto an \textbf{nginx}/\textbf{WSGI} dashboard accessed 100+ times daily.
 % ansible audit. is this meaningfully different from running tests?
@@ -61,46 +51,38 @@ Something something leadership/education/outreach
 % Rolled out a continuous testing solution for Cray's next-generation line of multi-OS s. Fielded questions from 100+ developers.
 % Triggered \textbf{Jenkins} builds via \textbf{REST API}. Monitored the queue and throttled job submissions to run 50 multithreaded jobs without stalling a standalone build server.
 % Exported and analyzed  logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
+-->
 
-\end{itemize}
+# Visiting Assistant Professor @ St Olaf College, 2020
 
-\headerrow
-    {Visiting Assistant Professor}
-    {St Olaf College}
-    {2020}
-\begin{itemize}
-    \item Introduced college juniors to advanced analytical and computational problem solving techniques.
+- Introduced college juniors to advanced analytical and computational problem solving techniques.
+
+<!---
 %    \item Developed and delivered curriculum.
 %    \item Classical mechanics is less about physics and more about developing new analytical and numerical tools.
 %    \item Pivoted from in-person learning to
-\end{itemize}
+-->
 
-\headerrow
-    {Volunteer Coach}
-    {Special Olympics Minnesota}
-    {\years{2018}{Present}}
-\begin{itemize}
-    \item Adapted coaching strategies to each athlete's physical abilities and communication skills.
+# Volunteer Coach @ Special Olympics Minnesota, 2018-Present
+
+- Adapted coaching strategies to each athlete's physical abilities and communication skills.
+
+<!---
 %    \item Coordinated warm-ups, meals, and parent concerns during full-day Area and State meets.
 %    \item Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
 % incremental progress
-\end{itemize}
+-->
 
-\headerrow
-    {Shop Volunteer}
-    {Science Museum of Minnesota}
-    {\years{2018}{2020}}
-\begin{itemize}
-    \item Developed microcontroller applications in \textbf{Python} and \textbf{\CPP} for use in museum exhibits.
-\end{itemize}
+# Shop Volunteer @ Science Museum of Minnesota, 2018-2020
 
-\headerrow
-    {Research Assistant}
-    {University of Minnesota}
-    {\years{2009}{2016}}
-\begin{itemize}
-    \item Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
-    \item Tutored at-risk students individually, improving their performance by a full letter grade or more.
+- Developed microcontroller applications in **Python** and **C++** for use in museum exhibits.
+
+# Research Assistant @ University of Minnesota, 2009-2016
+
+- Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel **Fortran**. Analyzed hundreds of gigabytes of data in **Python** to identify novel patterns.
+- Tutored at-risk students individually, improving their performance by a full letter grade or more.
+
+<!---
 % Considered anomalous ring current activity as a novel driving mechanism
 % Developed a numerical model of near-Earth electromagnetic waves in parallel \textbf{Fortran}. Analyzed hundreds of gigabytes of data in \textbf{Python} to identify novel patterns.
 % Created clear data visualizations using \textbf{Matplotlib}. Shared methods and results via posters, papers, and workshops.
@@ -109,24 +91,18 @@ Something something leadership/education/outreach
 % Coordinated between professors, teaching assistants, and tutors as Head TA.
 % Communicated detailed concepts to audiences with varied technical backgrounds.
 % Coached new team members to improve student outcomes.
-\end{itemize}
+-->
 
-\Break
+---
 
-\headerrow
-    {PhD (Space Physics)}
-    {University of Minnesota}
-    {2016}
-%\begin{itemize}
+# PhD (Space Physics) @ University of Minnesota, 2016
+
+<!---
 %    \item Space physics, Burlaga/Arctowski Medal Fellow
-%\end{itemize}
+-->
 
-\headerrow
-    {BA (Mathematics \& Physics)}
-    {St Olaf College}
-    {2009}
-%\begin{itemize}
+# BA (Mathematics \& Physics) @ St Olaf College, 2009
+
+<!---
 %    \item Math (Distinction), Physics (Distinction), Magna Cum Laude
-%\end{itemize}
-
-\end{document}
+-->
