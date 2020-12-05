@@ -33,7 +33,8 @@
 % Pandoc throws \tightlist in there automatically, so we'd better define it
 \providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
 
-% Horizontal line across section breaks
+% Horizontal line across section breaks. The argument is the name of the
+% section, just in case we want to get that back in there.
 \renewcommand{\section}[1]{{\color{Purple}\sout{\hfill}}}
 
 % Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
@@ -43,9 +44,7 @@
 \begin{document}
 
 \begin{center}
-    {\huge $name$}
-
-    \vspace{8pt}
+    {\LARGE $name$}
 
     \emailtag\hfill\webtag\hfill\phonetag\hfill\citytag
 \end{center}

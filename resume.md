@@ -20,15 +20,23 @@ Something something leadership/education/outreach
 
 # Experience
 
-## Intern > Test Engineer > DevOps Engineer @ Cray Inc, 2014-Present
+## DevOps Engineer @ Cray Inc, 2019-Present (HPE, 2020-Present)
 
 - Created a **Bash**/**Python** framework to automate testing on **Linux** supercomputers. Supported three development teams as they moved from quarterly release testing to continuous testing.
 - Built an auto-triage system to forward test failures to product owners on Slack and/or Jira via **REST API**, saving dozens of person-hours of manual triage daily.
 - Automated deployment of **Docker**-based services, including an **ELK** database and a **WSGI** dashboard. Enabled my team to iterate over dozens of commits per day in production-like environments.
 - Wrote a **Groovy** pipeline to build, test, and distribute RPMs in support of 100+ engineers.
+
+## System Test Engineer @ Cray Inc, 2016-2018
+
 - Administered boots and upgrades for a 200-node **Linux** supercomputer in support of 20 engineers.
 - Implemented a parallel **Python** package for access and analysis of supercomputer logs. Parsed terabytes of text to diagnose hardware failures on a \$70 million customer installation.
 - Scraped and parsed boot logs from thousands of nodes across six in-house supercomputers. Isolated performance regressions from firmware updates nightly, rather than weekly.
+- Implemented a **Python** API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
+
+## Performance Intern @ Cray Inc, 2014-2015
+
+- Deployed an automated **Python** harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 
 <!---
 % Automatically provisioned a virtual  on commit for testing.
@@ -43,11 +51,9 @@ Something something leadership/education/outreach
 % mentored interns
 % admin work. 200-node , team of 20
 % log access and analysis. diagnosed hardware failures on Cori, 12k nodes, $70M
-% Implemented a Python API for control and testing of the Cray XC cooling system. Isolated bugs that, if released, would have cost millions of dollars in waste and damage.
 % Crawled thousands of repos via BitBucket's REST API. Validated pipeline changes against live use cases to avoid disrupting product streams
 % Triggered jobs via Jenkins REST API. Monitored the queue and throttled job submission to avoid deadlocking the build server
 % Prepared and presented educational materials to onboard dozens of new employees.
-% Deployed a parallel \textbf{Python} harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 % Presented tech forum and fielded questions from 100+ coworkers.
 % Automated interfaces with REST APIs for Jenkins, BitBucket, TestRail, and in-house applications.
 % Rolled out a continuous testing solution for Cray's next-generation line of multi-OS s. Fielded questions from 100+ developers.
