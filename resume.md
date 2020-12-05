@@ -6,6 +6,8 @@ phone: 651-269-9245
 location: Minneapolis
 ---
 
+# Summary
+
 Ten years automation and analysis in Python.
 Fluent in Linux and shell scripting.
 Familiar with CI/CD tools such as Jenkins, Docker, and REST APIs.
@@ -16,9 +18,9 @@ Comfortable mentoring interns, onboarding employees, and evangelizing new techno
 
 Something something leadership/education/outreach
 
----
+# Experience
 
-# Intern > Test Engineer > DevOps Engineer @ Cray Inc, 2014-Present
+## Intern > Test Engineer > DevOps Engineer @ Cray Inc, 2014-Present
 
 - Created a **Bash**/**Python** framework to automate testing on **Linux** supercomputers. Supported three development teams as they moved from quarterly release testing to continuous testing.
 - Built an auto-triage system to forward test failures to product owners on Slack and/or Jira via **REST API**, saving dozens of person-hours of manual triage daily.
@@ -53,7 +55,7 @@ Something something leadership/education/outreach
 % Exported and analyzed  logs for display in an \textbf{ELK} dashboard. Flagged anomalous boots in real time, allowing problems to be isolated in hours rather than days.
 -->
 
-# Visiting Assistant Professor @ St Olaf College, 2020
+## Visiting Assistant Professor @ St Olaf College, 2020
 
 - Introduced college juniors to advanced analytical and computational problem solving techniques.
 
@@ -63,7 +65,7 @@ Something something leadership/education/outreach
 %    \item Pivoted from in-person learning to
 -->
 
-# Volunteer Coach @ Special Olympics Minnesota, 2018-Present
+## Volunteer Coach @ Special Olympics Minnesota, 2018-Present
 
 - Adapted coaching strategies to each athlete's physical abilities and communication skills.
 
@@ -73,11 +75,11 @@ Something something leadership/education/outreach
 % incremental progress
 -->
 
-# Shop Volunteer @ Science Museum of Minnesota, 2018-2020
+## Shop Volunteer @ Science Museum of Minnesota, 2018-2020
 
 - Developed microcontroller applications in **Python** and **C++** for use in museum exhibits.
 
-# Research Assistant @ University of Minnesota, 2009-2016
+## Research Assistant @ University of Minnesota, 2009-2016
 
 - Benchmarked and optimized a model of near-Earth electromagnetic waves in parallel **Fortran**. Analyzed hundreds of gigabytes of data in **Python** to identify novel patterns.
 - Tutored at-risk students individually, improving their performance by a full letter grade or more.
@@ -93,15 +95,15 @@ Something something leadership/education/outreach
 % Coached new team members to improve student outcomes.
 -->
 
----
+# Education
 
-# PhD (Space Physics) @ University of Minnesota, 2016
+## PhD (Space Physics) @ University of Minnesota, 2016
 
 <!---
 %    \item Space physics, Burlaga/Arctowski Medal Fellow
 -->
 
-# BA (Mathematics \& Physics) @ St Olaf College, 2009
+## BA (Mathematics \& Physics) @ St Olaf College, 2009
 
 <!---
 %    \item Math (Distinction), Physics (Distinction), Magna Cum Laude

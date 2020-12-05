@@ -33,12 +33,12 @@
 % Pandoc throws \tightlist in there automatically, so we'd better define it
 \providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
 
-% Redefine line breaks to use our styling
-\renewcommand{\rule}[2]{{\color{Purple}\sout{\hfill}}}
+% Horizontal line across section breaks
+\renewcommand{\section}[1]{{\color{Purple}\sout{\hfill}}}
 
-% Expect sections like "Foo @ Bar". Left-align Foo and right-align Bar.
+% Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
 \setsepchar{@}
-\renewcommand{\section}[1]{\readlist*\elts{#1}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
+\renewcommand{\subsection}[1]{\readlist*\elts{#1}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
 
 \begin{document}
 
@@ -49,10 +49,6 @@
 
     \emailtag\hfill\webtag\hfill\phonetag\hfill\citytag
 \end{center}
-
-% We redefine horizontal rules in a way that ignores the argument, but we might
-% as well keep them consistent.
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
 $body$
 
