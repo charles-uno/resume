@@ -6,6 +6,8 @@
 \usepackage{enumitem}
 % Just one footnote: past name. Use an asterisk rather than a number
 \usepackage[symbol]{footmisc}
+% For shading block quotes
+\usepackage{framed}
 \usepackage[letterpaper, margin=0.8in]{geometry}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
@@ -44,6 +46,12 @@
 % Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
 \setsepchar{@}
 \renewcommand{\subsection}[1]{\readlist*\elts{#1@}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
+
+% Block quotes are used for notes to the editor. Let's add a background color.
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\colorlet{shadecolor}{Purple!12}
+\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
 
 \begin{document}
 
