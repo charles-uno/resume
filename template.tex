@@ -1,7 +1,11 @@
 \documentclass[12pt,letterpaper]{article}
 \pagestyle{empty}
 
+% Need mathbb for publication title
+\usepackage{amsfonts}
 \usepackage{enumitem}
+% Just one footnote: past name. Use an asterisk rather than a number
+\usepackage[symbol]{footmisc}
 \usepackage[letterpaper, margin=0.8in]{geometry}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
@@ -39,7 +43,7 @@
 
 % Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
 \setsepchar{@}
-\renewcommand{\subsection}[1]{\readlist*\elts{#1}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
+\renewcommand{\subsection}[1]{\readlist*\elts{#1@}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
 
 \begin{document}
 

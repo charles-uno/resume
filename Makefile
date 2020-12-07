@@ -6,8 +6,14 @@ MOUNT := /workdir
 all: resume
 
 resume: image
-	rm *.pdf ||:
+	rm resume.pdf ||:
 	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) pandoc resume.md --template template.tex -o resume.pdf
+
+
+cv: image
+	rm cv.pdf ||:
+	docker run --rm --mount type=bind,source=$(PWD),target=$(MOUNT) -w $(MOUNT) $(IMAGE) pandoc cv.md --template template.tex -o cv.pdf
+
 
 image: Dockerfile
 	docker build . -f Dockerfile -t $(IMAGE)
