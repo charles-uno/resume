@@ -3,6 +3,7 @@
 
 % Need mathbb for publication title
 \usepackage{amsfonts}
+\usepackage{booktabs}
 \usepackage{enumitem}
 % Just one footnote: past name. Use an asterisk rather than a number
 \usepackage[symbol]{footmisc}
@@ -13,6 +14,7 @@
 \usepackage[hidelinks]{hyperref}
 % For splitting words in section names
 \usepackage{listofitems}
+\usepackage{longtable}
 \usepackage{parskip}
 % Add \sout, used to add rules to header lines.
 \usepackage[normalem]{ulem}
@@ -23,6 +25,7 @@
 % Fancy font
 \usepackage{ocr}
 \newcommand{\fancy}[1]{\small{\ocrfamily{#1}}}
+%\newcommand{\fancy}[1]{\scalebox{0.8}[1.0]{\ocrfamily{#1}}}
 
 % Finagle with the floating icons and contact info under the name
 \newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.5em}\fancy{#2}}
@@ -37,7 +40,7 @@
 \renewenvironment{itemize}{\vspace{-15pt}\begin{olditemize}}{\end{olditemize}\vspace{-7pt}}
 
 % Pandoc throws \tightlist in there automatically, so we'd better define it
-\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{4pt}\setlength{\parskip}{0pt}}
 
 % Horizontal line across section breaks. The argument is the name of the
 % section, just in case we want to get that back in there.
