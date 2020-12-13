@@ -1,15 +1,13 @@
 \documentclass[12pt,letterpaper]{article}
 \pagestyle{empty}
 
-% Need mathbb for publication title
+% Need mathbb for publication title in the CV
 \usepackage{amsfonts}
 \usepackage{booktabs}
 \usepackage{enumitem}
 % Just one footnote: past name. Use an asterisk rather than a number
 \usepackage[symbol]{footmisc}
-% For shading block quotes
-\usepackage{framed}
-\usepackage[letterpaper, margin=0.8in]{geometry}
+\usepackage[letterpaper, left=0.8in, right=0.8in, bottom=0.8in, top=0.6in]{geometry}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 % For splitting words in section names
@@ -22,13 +20,25 @@
 
 \setlength{\parskip}{10pt}
 
-% Fancy font
-\usepackage{ocr}
-\newcommand{\fancy}[1]{\small{\ocrfamily{#1}}}
-%\newcommand{\fancy}[1]{\scalebox{0.8}[1.0]{\ocrfamily{#1}}}
+% Font selection. Let's go with a single font for the whole document. A bright
+% sans serif font for ease of reading.
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{cmbright}
+
+% A few other (less good) font options.
+%\usepackage[sfdefault]{ClearSans}
+%\usepackage[sfdefault,condensed]{roboto}
+%\usepackage[default]{sourcesanspro}
+%\usepackage{PTSansCaption}
+%\usepackage[sfdefault]{overlock}
+%\usepackage[sfdefault,condensed]{cabin}
+
+% Styles for section dividers and job header lines. Keep it simple.
+\newcommand{\sectionstyle}[1]{#1}
+\newcommand{\jobstyle}[1]{{\large \textit{#1}}}
 
 % Finagle with the floating icons and contact info under the name
-\newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.5em}\fancy{#2}}
+\newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.3em}{{\small #2}}}
 \newcommand{\emailtag}{\tag{icons/envelope-regular.pdf}{\href{mailto:$email$}{$email$}}}
 \newcommand{\webtag}{\tag{icons/link-solid.pdf}{\href{$url$}{$url$}}}
 \newcommand{\phonetag}{\tag{icons/phone-solid.pdf}{\href{tel:$phone$}{$phone$}}}
@@ -37,31 +47,26 @@
 % Redefine itemize to have a slight upward shift
 \let\olditemize\itemize
 \let\endolditemize\enditemize
-\renewenvironment{itemize}{\vspace{-15pt}\begin{olditemize}}{\end{olditemize}\vspace{-7pt}}
+\renewenvironment{itemize}{\vspace{-7pt}\begin{olditemize}}{\end{olditemize}\vspace{-3pt}}
 
 % Pandoc throws \tightlist in there automatically, so we'd better define it
-\providecommand{\tightlist}{\setlength{\itemsep}{4pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
 
-% Horizontal line across section breaks. The argument is the name of the
-% section, just in case we want to get that back in there.
-\renewcommand{\section}[1]{{\color{Purple}\sout{\hfill}}}
+% Colored horizontal line with section breaks
+\renewcommand{\section}[1]{{\color{Purple}\sout{\hfill} \sectionstyle{#1} \sout{\hfill}}}
 
 % Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
 \setsepchar{@}
-\renewcommand{\subsection}[1]{\readlist*\elts{#1@}\fancy{\elts[1]}\hfill\fancy{\elts[2]}}
-
-% Block quotes are used for notes to the editor. Let's add a background color.
-\let\oldquote=\quote
-\let\endoldquote=\endquote
-\colorlet{shadecolor}{Purple!12}
-\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
+\renewcommand{\subsection}[1]{\readlist*\elts{#1@}\jobstyle{\elts[1]}\hfill\jobstyle{\elts[2]}}
 
 \begin{document}
 
 \begin{center}
     {\LARGE $name$}
 
-    \emailtag\hfill\webtag\hfill\phonetag\hfill\citytag
+    % qquad is a set horizontal spacing. Swap that out for hfill if we want
+    % uniform spacing for the full width.
+    \emailtag\qquad\webtag\qquad\phonetag\qquad\citytag
 \end{center}
 
 $body$

@@ -31,3 +31,9 @@ Icons from [FontAwesome](https://fontawesome.com/) under [CC-BY 4.0](https://fon
 
 Looks like there's a bug inkscape/convert/mogrify as far as converting SVGs, at
 least on an macOS kernel. Weird. Converted on Ubuntu, add the PDFs to the repo.
+
+Default LaTeX template for Pandoc:
+https://github.com/jgm/pandoc-templates/blob/master/default.latex
+
+Documentation of available variables for Pandoc:
+https://pandoc.org/MANUAL.html#variables-for-latex
