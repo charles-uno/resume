@@ -11,7 +11,7 @@ location: Minneapolis
 Ten years of experience with Python and distributed Linux systems.
 Emphasis on CI/CD tools such as Jenkins, Docker, and REST APIs.
 Consistent dedication to building a stronger team through mentorship and training.
-Looking for ...?
+Looking for a position with room to grow.
 
 <!---
 stolaf: coached
@@ -35,7 +35,7 @@ students, interns, and junior engineers.
 - Led development of a **Python**-based monitoring framework for HPE's Cray supercomputers. Automated failure detection for **Ansible**, **Kubernetes**, and hardware configuration. Published real-time updates on Slack via **REST API**, saving dozens of hours of triage daily.
 - Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
-- Built a **Flask**/**WSGI** microservice to ingest and serve data via **REST API**. Aggregated build, test, and installation documents in a **time series database**. Extracted actionable metrics and tailored dashboards to developer, product owner, and VP use cases.
+- Built **Flask**/**WSGI** microservices to ingest and serve data via **REST API**. Aggregated build, test, and installation documents in a **time series database**. Extracted actionable metrics and tailored dashboards to developer, product owner, and VP use cases.
 
 <!---
 - Mentored a junior developers as they steered functionality into production.
