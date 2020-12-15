@@ -125,6 +125,15 @@ Cori: 12k nodes, $70M
 - Soldering, exhibit assembly.
 -->
 
+
+
+<!---
+charles.uno, including the Docker setup
+MTG modeling
+
+-->
+
+
 # Education
 
 ## Ph.D. (Space Physics) @ University of Minnesota, 2016
