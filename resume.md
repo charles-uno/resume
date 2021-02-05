@@ -14,6 +14,13 @@ Consistent dedication to building a stronger team through mentorship and trainin
 Looking for a position with room to grow.
 
 <!---
+
+
+TODO: "at scale"
+TODO: OpenStack
+TODO: "cloud"
+
+
 stolaf: coached
 onboarding: trained. workload management
 no interns
@@ -32,12 +39,19 @@ students, interns, and junior engineers.
 
 ## Senior Systems/Software Engineer @ Hewlett Packard Enterprise, 2019--Present
 
-- Led development of a **Python**-based monitoring framework for HPE's Cray supercomputers. Automated failure detection for **Ansible**, **Kubernetes**, and hardware configuration. Published real-time updates on Slack via **REST API**, saving dozens of hours of triage daily.
-- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+- Led development of a **Python**-based monitoring framework for HPE's Cray supercomputers. Automated failure detection for **Ansible**, **Kubernetes**, and hardware configuration. Published real-time updates on Slack via webhook, saving dozens of hours of triage daily.
+- Designed and implemented an ecosystem of **Flask**/**WSGI** microservices to process **JSON** data via **REST API**. Interfaced with a **time series database** and an **AngularJS** dashboard to extract and present actionable metrics.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
-- Built **Flask**/**WSGI** microservices to ingest and serve data via **REST API**. Aggregated build, test, and installation documents in a **time series database**. Extracted actionable metrics and tailored dashboards to developer, product owner, and VP use cases.
+- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
 
 <!---
+
+
+ for aggregation
+
+
+nterfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
+
 - Mentored a junior developers as they steered functionality into production.
 - Created a **Groovy** pipeline to deploy **Docker**-based microservices on each **Git** commit. Enabled rapid iteration in a tightly-coupled ecosystem by aligning interfaces to industry best practices.
 
