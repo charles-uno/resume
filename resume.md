@@ -105,11 +105,11 @@ Cori: 12k nodes, $70M
 - Deployed an automated **Python** harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 -->
 
+<!---
 ## Volunteer Powerlifting Coach @ Special Olympics Minnesota, 2018--2020
 
 - Adapted coaching strategies to each athlete's physical abilities and communication skills.
 
-<!---
 - Coordinated warm-ups, meals, and parent concerns during full-day Area and State meets.
 - Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
 - incremental progress
@@ -148,7 +148,9 @@ MTG modeling
 -->
 
 
-# Education
+# Education \& Certifications
+
+## Professional Scrum Master I @ Scrum.org, 2018
 
 ## Ph.D. (Space Physics) @ University of Minnesota, 2016
 <!---
