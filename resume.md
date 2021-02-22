@@ -9,16 +9,15 @@ location: Minneapolis
 # Summary
 
 Ten years of experience with Python and distributed Linux systems.
-Emphasis on CI/CD tools such as Jenkins, Docker, and REST APIs.
-Consistent dedication to building a stronger team through mentorship and training.
-Looking for a position with room to grow.
+Emphasis on DevOps tools such as Groovy, Docker, and REST APIs.
+Looking for opportunities in microservice development and Site Reliability Engineering.
 
 <!---
-
 
 TODO: "at scale"
 TODO: OpenStack
 TODO: "cloud"
+TODO: on-premises / on-prem
 
 
 stolaf: coached
@@ -42,7 +41,7 @@ students, interns, and junior engineers.
 - Led development of a **Python**-based monitoring framework for HPE's Cray supercomputers. Automated failure detection for **Ansible**, **Kubernetes**, and hardware configuration. Published real-time updates on Slack via webhook, saving dozens of hours of triage daily.
 - Designed and implemented an ecosystem of **Flask**/**WSGI** microservices to process **JSON** data via **REST API**. Interfaced with a **time series database** and an **AngularJS** dashboard to extract and present actionable metrics.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
-- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+- Wrote **Groovy** pipelines to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
 
 <!---
 
@@ -150,7 +149,7 @@ MTG modeling
 
 # Education
 
-## Ph.D. (Space Physics) @ University of Minnesota, 2016
+## Ph.D. (Plasma Physics) @ University of Minnesota, 2016
 <!---
 - Burlaga/Arctowski Medal Fellow
 -->
