@@ -6,6 +6,12 @@ phone: 651-269-9245
 location: Minneapolis
 ---
 
+# Professorships
+
+## St. Olaf College
+
+- Fall 2020: Classical Mechanics
+
 
 # Teaching Assistantships
 
@@ -19,7 +25,7 @@ location: Minneapolis
 - Spring 2011: Introductory Physics for Science and Engineering II
 
 
-## St Olaf College
+## St. Olaf College
 
 - Spring 2009: Principles of Physics II
 - Spring 2009: Ballroom Dance I
