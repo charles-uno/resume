@@ -9,7 +9,7 @@ location: Minneapolis
 # Summary
 
 Ten years of experience with Python and distributed Linux systems.
-Emphasis on DevOps tools such as Groovy, Docker, and REST APIs.
+Emphasis on DevOps tools such as Docker, Groovy, and REST APIs.
 Looking for opportunities in microservice development and Site Reliability Engineering.
 
 <!---
@@ -38,18 +38,16 @@ students, interns, and junior engineers.
 
 ## Senior Systems/Software Engineer @ Hewlett Packard Enterprise, 2019--Present
 
-- Led development of a **Python**-based monitoring framework for HPE's Cray supercomputers. Automated failure detection for **Ansible**, **Kubernetes**, and hardware configuration. Published real-time updates on Slack via webhook, saving dozens of hours of triage daily.
-- Designed and implemented an ecosystem of **Flask**/**WSGI** microservices to process **JSON** data via **REST API**. Interfaced with a **time series database** and an **AngularJS** dashboard to extract and present actionable metrics.
-- Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
+- Built an ecosystem of **Python** and **Go** microservices for monitoring supercomputers. Detected failures in **Ansible**, **Kubernetes**, and hardware configuration. Cross-referenced build logs to identify product owners. Published real-time updates on Slack via **REST API**.
+- Prioritized **Scrum** backlog for a team of five engineers.
 - Wrote **Groovy** pipelines to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+- Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
+- Aggregated build, test, and deployment data in **Elasticsearch**. Created an **AngularJS** dashboard to show metrics per developer, product owner, and VP use cases.
 
 <!---
 
 
- for aggregation
-
-
-nterfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
+Interfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
 
 - Mentored a junior developers as they steered functionality into production.
 - Created a **Groovy** pipeline to deploy **Docker**-based microservices on each **Git** commit. Enabled rapid iteration in a tightly-coupled ecosystem by aligning interfaces to industry best practices.
@@ -85,24 +83,21 @@ nterfaced with a **time series database** to aggregate build, test, and deployme
 
 ## System Test Engineer @ Cray Inc., 2016--2019
 
-- Created a multithreaded **Python** package for access and analysis of system logs. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
-- Administered boots and upgrades on a 200-node **Linux** system in support of 20 engineers.
 - Scraped, parsed, and analyzed boot data from thousands of nodes via **Python** and **shell scripts**. Identified performance regressions and correlated them with firmware updates.
+- Administered boots and upgrades on a 200-node **Linux** system in support of 20 engineers.
+- Orchestrated **Jenkins** pipelines via **REST API**. Automatically monitored and throttled queues to ensure build server stability.
 
 <!---
-
+- Created a multithreaded **Python** package for access and analysis of system logs. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 - Developed educational materials to onboard dozens of new employees.
-
 - Trained dozens of employees to use Cray supercomputers and workload managers.
-
 - Mentored two interns. Recommended one of them for a full-time position after graduation.
-- Launched **Jenkins** pipelines via **REST API**. Throttled jobs automatically to ensure the stability of the skunkworks build server.
 - Centralized access and analysis of supercomputer log files via a multithreaded **Python** package. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 - Developed an object-oriented **Python** library for control and testing of the Cray XC liquid cooling system. Averted emergency reboots, thermal throttling, and tens of thousands of dollars in wasted power.
 - we were doing Jenkins on a skunkworks server before anyone else at Cray!
 Cori: 12k nodes, $70M
-- Deployed an automated **Python** harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 -->
+
 
 ## Volunteer Powerlifting Coach @ Special Olympics Minnesota, 2018--2020
 
@@ -114,9 +109,17 @@ Cori: 12k nodes, $70M
 - incremental progress
 -->
 
+
+<!---
+## Performance Intern @ Cray Inc, 2014-2015
+
+- Deployed an automated **Python** harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
+-->
+
+
 ## Research/Teaching Assistant @ University of Minnesota, 2009-2016
 
-- Automated parallel simulations and analyzed hundreds of gigabytes of data using **Python**.
+- Optimized simulations in parallel **C++**. Analyzed hundreds of gigabytes of data in **Python**.
 - Instructed hundreds of college students on the fundamentals of data analysis.
 
 <!---
@@ -139,15 +142,20 @@ Cori: 12k nodes, $70M
 -->
 
 
-
 <!---
 charles.uno, including the Docker setup
 MTG modeling
-
 -->
 
 
 # Education
+
+
+<!---
+# Education *and certifications*
+
+## Professional Scrum Master 1 @ Scrum.org, 2018
+-->
 
 ## Ph.D. (Plasma Physics) @ University of Minnesota, 2016
 <!---
