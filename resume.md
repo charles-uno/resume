@@ -8,9 +8,10 @@ location: Minneapolis
 
 # Summary
 
-Ten years of experience with Python and distributed Linux systems.
-Emphasis on DevOps tools such as Docker, Groovy, and REST APIs.
-Looking for opportunities in microservice development and Site Reliability Engineering.
+Twelve years experience with Python and distributed Linux systems.
+Emphasis on automation and validation using Docker, CI/CD pipelines, and REST APIs.
+Looking for opportunities in cloud infrastructure, back-end development, or somewhere in between.
+
 
 <!---
 
@@ -18,7 +19,6 @@ TODO: "at scale"
 TODO: OpenStack
 TODO: "cloud"
 TODO: on-premises / on-prem
-
 
 stolaf: coached
 onboarding: trained. workload management
@@ -36,18 +36,30 @@ students, interns, and junior engineers.
 
 # Experience
 
-## Senior Systems/Software Engineer @ Hewlett Packard Enterprise, 2019--Present
+## Software Engineer @ Facebook, 2021--Present
 
-- Built an ecosystem of **Python** and **Go** microservices for monitoring supercomputers. Detected failures in **Ansible**, **Kubernetes**, and hardware configuration. Cross-referenced build logs to identify product owners. Published real-time updates on Slack via **REST API**.
-- Prioritized **Scrum** backlog for a team of five engineers.
-- Wrote **Groovy** pipelines to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+- Developed back-end applications in **Java** for Android Messenger.
+
+## flashcards.charles.uno @ 2021--Present
+
+- Created a novel game theory application using **Go** and **ReactJS**. Deployed updates to **AWS** on commit via **GitHub Actions** and **Docker Compose**.
+
+## DevOps Engineer @ Cray Inc., 2019--2021
+
+- Led development of a monitoring framework for **Ansible**, **Kubernetes**, and hardware configuration on supercomputers. Published real-time updates to Slack via **REST API**, saving dozens of hours of manual triage daily.
+- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
 - Aggregated build, test, and deployment data in **Elasticsearch**. Created an **AngularJS** dashboard to show metrics per developer, product owner, and VP use cases.
 
+
 <!---
-
-
 Interfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
+
+
+Vendors
+
+- Built an ecosystem of **Python** and **Go** microservices for monitoring supercomputers. Detected failures in **Ansible**, **Kubernetes**, and hardware configuration. Cross-referenced build logs to identify product owners. Published real-time updates on Slack via **REST API**.
+- Prioritized a **Scrum** backlog for a team of five engineers.
 
 - Mentored a junior developers as they steered functionality into production.
 - Created a **Groovy** pipeline to deploy **Docker**-based microservices on each **Git** commit. Enabled rapid iteration in a tightly-coupled ecosystem by aligning interfaces to industry best practices.
@@ -66,10 +78,11 @@ Interfaced with a **time series database** to aggregate build, test, and deploym
 
 ## Visiting Assistant Professor of Physics @ St. Olaf College, Fall 2020
 
-- Coached students in advanced problem solving techniques, including numerical modeling and data visualization in **Python**.
-- Supervised a TA and two tutors as they provided students with additional support.
+- Coached students in advanced problem solving techniques, including numerical modeling.
 
 <!---
+- Coached students in advanced problem solving techniques, including numerical modeling and data visualization in **Python**.
+- Supervised a TA and two tutors as they provided students with additional support.
 - Drove positive student outcomes in the midst of a global crisis. Iterated over teaching tools and re-prioritized curriculum to suit remote learning.
 - Balanced lecture, group work, and one-on-one meetings to ensure each student's grasp of core concepts.
 - Delegated one-on-one support (in part) to two TAs to ensure each student's grasp of core concepts.
@@ -85,9 +98,11 @@ Interfaced with a **time series database** to aggregate build, test, and deploym
 
 - Scraped, parsed, and analyzed boot data from thousands of nodes via **Python** and **shell scripts**. Identified performance regressions and correlated them with firmware updates.
 - Administered boots and upgrades on a 200-node **Linux** system in support of 20 engineers.
-- Orchestrated **Jenkins** pipelines via **REST API**. Automatically monitored and throttled queues to ensure build server stability.
+- Automated testing using **Pytest** and **Tavern**. Logged results in **TestRail** and **Zephyr**.
 
 <!---
+
+- Orchestrated **Jenkins** pipelines via **REST API**. Automatically monitored and throttled queues to ensure build server stability.
 - Created a multithreaded **Python** package for access and analysis of system logs. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 - Developed educational materials to onboard dozens of new employees.
 - Trained dozens of employees to use Cray supercomputers and workload managers.
@@ -99,11 +114,10 @@ Cori: 12k nodes, $70M
 -->
 
 
+<!---
 ## Volunteer Powerlifting Coach @ Special Olympics Minnesota, 2018--2020
 
 - Adapted coaching strategies to each athlete's physical abilities and communication skills.
-
-<!---
 - Coordinated warm-ups, meals, and parent concerns during full-day Area and State meets.
 - Worked with 20 athletes aged 16 to 60 to improve health, strength, and confidence.
 - incremental progress
@@ -119,7 +133,7 @@ Cori: 12k nodes, $70M
 
 ## Research/Teaching Assistant @ University of Minnesota, 2009-2016
 
-- Optimized simulations in parallel **C++**. Analyzed hundreds of gigabytes of data in **Python**.
+- Optimized simulations in parallel **Fortran**. Analyzed hundreds of gigabytes of data in **Python**.
 - Instructed hundreds of college students on the fundamentals of data analysis.
 
 <!---
