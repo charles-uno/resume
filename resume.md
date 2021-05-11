@@ -10,7 +10,7 @@ location: Minneapolis
 
 Twelve years experience with Python and distributed Linux systems.
 Emphasis on automation and validation using Docker, CI/CD pipelines, and REST APIs.
-Looking for opportunities in cloud infrastructure, back-end development, or somewhere in between.
+Open to opportunities in cloud infrastructure, back-end development, or somewhere in between.
 
 
 <!---
