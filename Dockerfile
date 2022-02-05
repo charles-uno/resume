@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 # Avoid prompt for time zone info during LaTeX install
 ENV DEBIAN_FRONTEND=noninteractive

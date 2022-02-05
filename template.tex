@@ -17,6 +17,7 @@
 % Add \sout, used to add rules to header lines.
 \usepackage[normalem]{ulem}
 \usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{xstring}
 
 \setlength{\parskip}{10pt}
 
@@ -55,9 +56,16 @@
 % Colored horizontal line with section breaks
 \renewcommand{\section}[1]{{\color{Purple}\sout{\hfill} \sectionstyle{#1} \sout{\hfill}}}
 
-% Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar.
-\setsepchar{@}
-\renewcommand{\subsection}[1]{\readlist*\elts{#1@}\jobstyle{\elts[1]}\hfill\jobstyle{\elts[2]}}
+% Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar. Also
+% format arrows "->" nicely.
+\newcommand{\fmtsection}[1]{{%
+  \noexpandarg % suppress expansions made by xstring
+  \StrSubstitute{#1}{\%}{\%25}[\x]% first step
+  \expandafter\StrSubstitute\expandafter{\x}{-\textgreater}{\textrightarrow}[\x]%
+  \expandafter\StrSubstitute\expandafter{\x}{@}{\hfill}[\x]%
+  \x}}
+\renewcommand{\subsection}[1]{\jobstyle{\fmtsection{#1}}}
+
 
 \begin{document}
 

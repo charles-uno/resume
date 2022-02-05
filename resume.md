@@ -8,12 +8,17 @@ location: Minneapolis
 
 # Summary
 
+Twelve years of experience with distributed Linux systems.
+
+
+
 Twelve years experience with Python and distributed Linux systems.
-Emphasis on automation and validation using Docker, CI/CD pipelines, and REST APIs.
+Emphasis on the server side using Docker, CI/CD pipelines, and REST APIs.
 Open to opportunities in cloud infrastructure, back-end development, or somewhere in between.
 
-
 <!---
+
+SERVER SIDE
 
 TODO: "at scale"
 TODO: OpenStack
@@ -36,25 +41,44 @@ students, interns, and junior engineers.
 
 # Experience
 
-## Software Engineer @ Facebook, 2021--Present
+## Software Engineer: Messaging Infrastructure @ Facebook, 2021--Present
 
-- Developed back-end applications in **Java** for Android Messenger.
+unified message request infrastructure
+online validation
+migrated 30B users and 200B threads. race conditions. no downtime
+validation and monitoring for code that handles 1B messages daily
 
+<!--
 ## flashcards.charles.uno @ 2021--Present
 
-- Created a novel game theory application using **Go** and **ReactJS**. Deployed updates to **AWS** on commit via **GitHub Actions** and **Docker Compose**.
+- Created a novel game theory application using **Go**, **ReactJS**, and **Docker Compose**. Orchestrated blue-green deployment to **AWS** via **GitHub Actions**.
+-->
 
-## DevOps Engineer @ Cray Inc., 2019--2021
+## Visiting Assistant Professor of Physics @ St. Olaf College, Fall 2020
+
+- Coached undergraduate juniors in advanced problem solving techniques.
+- Coordinated the efforts of two TAs to ensure each student's grasp of core concepts.
+
+<!---
+- Coached students in advanced problem solving techniques, including numerical modeling and data visualization in **Python**.
+- Drove positive student outcomes in the midst of a global crisis. Iterated over teaching tools and re-prioritized curriculum to suit remote learning.
+- Balanced lecture, group work, and one-on-one meetings to ensure each student's grasp of core concepts.
+- Delegated one-on-one support (in part) to two TAs to ensure each student's grasp of core concepts.
+- directed students to on-campus resources for health and support
+- unconventional/creative assignments, not just problems.
+- Balanced group work and one-on-one support to ensure mastery of each core concept.
+- Pivoted unexpectedly from in-person to remote learning. Re-prioritized curriculum and iterated over teaching tools.
+-->
+
+## Software Engineer: DevOps and Testing @ Cray Inc, 2016--2021
 
 - Led development of a monitoring framework for **Ansible**, **Kubernetes**, and hardware configuration on supercomputers. Published real-time updates to Slack via **REST API**, saving dozens of hours of manual triage daily.
 - Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
-- Aggregated build, test, and deployment data in **Elasticsearch**. Created an **AngularJS** dashboard to show metrics per developer, product owner, and VP use cases.
-
+- Centralized access and analysis of supercomputer log files via multithreaded **Python**. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 
 <!---
 Interfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
-
 
 Vendors
 
@@ -76,23 +100,7 @@ Vendors
 - Demonstrated pipeline best practices with an annotated end-to-end example: a **REST API** written in **Go**, wrapped in a **Docker** container, and deployed to **Kubernetes** via **Ansible**.
 -->
 
-## Visiting Assistant Professor of Physics @ St. Olaf College, Fall 2020
-
-- Coached students in advanced problem solving techniques, including numerical modeling.
-
 <!---
-- Coached students in advanced problem solving techniques, including numerical modeling and data visualization in **Python**.
-- Supervised a TA and two tutors as they provided students with additional support.
-- Drove positive student outcomes in the midst of a global crisis. Iterated over teaching tools and re-prioritized curriculum to suit remote learning.
-- Balanced lecture, group work, and one-on-one meetings to ensure each student's grasp of core concepts.
-- Delegated one-on-one support (in part) to two TAs to ensure each student's grasp of core concepts.
-- directed students to on-campus resources for health and support
-- Coordinated the efforts of a TA and two tutors to ensure each student's grasp of core concepts.
-- unconventional/creative assignments, not just problems.
-- Managed a TA and two tutors
-- Balanced group work and one-on-one support to ensure mastery of each core concept.
-- Pivoted unexpectedly from in-person to remote learning. Re-prioritized curriculum and iterated over teaching tools.
--->
 
 ## System Test Engineer @ Cray Inc., 2016--2019
 
@@ -100,19 +108,17 @@ Vendors
 - Administered boots and upgrades on a 200-node **Linux** system in support of 20 engineers.
 - Automated testing using **Pytest** and **Tavern**. Logged results in **TestRail** and **Zephyr**.
 
-<!---
-
 - Orchestrated **Jenkins** pipelines via **REST API**. Automatically monitored and throttled queues to ensure build server stability.
 - Created a multithreaded **Python** package for access and analysis of system logs. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 - Developed educational materials to onboard dozens of new employees.
 - Trained dozens of employees to use Cray supercomputers and workload managers.
 - Mentored two interns. Recommended one of them for a full-time position after graduation.
-- Centralized access and analysis of supercomputer log files via a multithreaded **Python** package. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
-- Developed an object-oriented **Python** library for control and testing of the Cray XC liquid cooling system. Averted emergency reboots, thermal throttling, and tens of thousands of dollars in wasted power.
 - we were doing Jenkins on a skunkworks server before anyone else at Cray!
 Cori: 12k nodes, $70M
--->
+- Aggregated build, test, and deployment data in **Elasticsearch**. Created an **AngularJS** dashboard to show metrics per developer, product owner, and VP use cases.
+- Developed an object-oriented **Python** library for control and testing of the Cray XC liquid cooling system. Averted emergency reboots, thermal throttling, and tens of thousands of dollars in wasted power.
 
+-->
 
 <!---
 ## Volunteer Powerlifting Coach @ Special Olympics Minnesota, 2018--2020
@@ -123,13 +129,11 @@ Cori: 12k nodes, $70M
 - incremental progress
 -->
 
-
 <!---
 ## Performance Intern @ Cray Inc, 2014-2015
 
 - Deployed an automated **Python** harness to run nightly tests against Cray's performance analysis tools. Filed detailed bugs against Cray, Gnu, and Intel compilers.
 -->
-
 
 ## Research/Teaching Assistant @ University of Minnesota, 2009-2016
 
@@ -147,7 +151,6 @@ Cori: 12k nodes, $70M
 - Coached new team members to improve student outcomes.
 -->
 
-
 <!---
 ## Shop Volunteer @ Science Museum of Minnesota, 2018-2020
 
@@ -155,15 +158,12 @@ Cori: 12k nodes, $70M
 - Soldering, exhibit assembly.
 -->
 
-
 <!---
 charles.uno, including the Docker setup
 MTG modeling
 -->
 
-
 # Education
-
 
 <!---
 # Education *and certifications*
