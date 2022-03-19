@@ -41,20 +41,20 @@
 % Finagle with the floating icons and contact info under the name
 \newcommand{\tag}[2]{\includegraphics[height=8px]{#1}\hspace{0.3em}{{\small #2}}}
 \newcommand{\emailtag}{\tag{icons/envelope-regular.pdf}{\href{mailto:$email$}{$email$}}}
-\newcommand{\webtag}{\tag{icons/link-solid.pdf}{\href{$url$}{$url$}}}
+\newcommand{\webtag}{\tag{icons/link-solid.pdf}{\href{https://$url$}{$url$}}}
 \newcommand{\phonetag}{\tag{icons/phone-solid.pdf}{\href{tel:$phone$}{$phone$}}}
 \newcommand{\citytag}{\tag{icons/map-marker-alt-solid.pdf}{$location$}}
 
 % Redefine itemize to have a slight upward shift
 \let\olditemize\itemize
 \let\endolditemize\enditemize
-\renewenvironment{itemize}{\vspace{-7pt}\begin{olditemize}}{\end{olditemize}\vspace{-3pt}}
+\renewenvironment{itemize}{\vspace{-5pt}\begin{olditemize}}{\end{olditemize}\vspace{0pt}}
 
 % Pandoc throws \tightlist in there automatically, so we'd better define it
-\providecommand{\tightlist}{\setlength{\itemsep}{3pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{4pt}\setlength{\parskip}{0pt}}
 
 % Colored horizontal line with section breaks
-\renewcommand{\section}[1]{{\color{Purple}\sout{\hfill} \sectionstyle{#1} \sout{\hfill}}}
+\renewcommand{\section}[1]{{\color{Plum}\sout{\hfill} \sectionstyle{#1} \sout{\hfill}}}
 
 % Expect subsections like "Foo @ Bar". Left-align Foo and right-align Bar. Also
 % format arrows "->" nicely.

@@ -8,13 +8,9 @@ location: Minneapolis
 
 # Summary
 
-Twelve years of experience with distributed Linux systems.
-
-
-
-Twelve years experience with Python and distributed Linux systems.
-Emphasis on the server side using Docker, CI/CD pipelines, and REST APIs.
-Open to opportunities in cloud infrastructure, back-end development, or somewhere in between.
+Twelve years of experience with distributed Linux systems, plus a variety of tools and languages.
+Comfortable taking ownership of complex systems with many stakeholders.
+Open to opportunities in cloud infrastructure, server-side development, or somewhere in between.
 
 <!---
 
@@ -43,10 +39,36 @@ students, interns, and junior engineers.
 
 ## Software Engineer: Messaging Infrastructure @ Facebook, 2021--Present
 
-unified message request infrastructure
-online validation
-migrated 30B users and 200B threads. race conditions. no downtime
-validation and monitoring for code that handles 1B messages daily
+- Unified message request logic for Facebook and Instagram in **PHP**/**Hack**. Extended publishers, subscribers, and data structures while enforcing strict backwards compatibility.
+- Owned testing, metrics, and resiliency for a code path handling billions of daily user requests. Maintained a baseline of zero stuck cursors.
+- Migrated 30 billion active mailboxes from legacy systems without downtime. Implemented real-time validation to guarantee 99.999% accuracy despite collisions and race conditions.
+
+<!--
+publishers and subscribers
+- Scored consistently in the top 10% of the Messenger organization in terms of testing.
+- Migrated 30 billion mailboxes from legacy systems while also accepting 1 billion daily mailbox updates from users. Implemented real-time validation to ensure 99.999% accuracy despite collisions.
+- Maintained a baseline of zero stuck cursors on a code path that encounters a one-in-a-million circumstance every minute.
+
+- Owned testing, logging, and alerting for a code path processing billions of user requests daily
+- Designed and administered a data migration job to move 30 billon active mailboxes from legacy systems, while also processing 1 billion daily user updates.
+- Migrated 30 billion mailboxes from legacy systems while also processing 1 billion daily user requests.
+- Earned repeated commendations for testing, monitoring, and alerting.
+- Maintained a baseline of zero stuck queues on a code path that encounters a one-in-a-million circumstance every 90 seconds.
+- Owned testing, logging, and alerting for a code path processing billions of user requests daily
+- Earned repeated commendations for testing, monitoring, and alerting.
+- Maintained a baseline of zero stuck queues on a code path that encounters a one-in-a-million circumstance every 90 seconds.
+
+live validation
+mailbox backfill
+folder backfill
+logic updates in subscriber
+logic updates in fanout
+writing lots of tests
+baseline of zero stuck cursors
+wiki updates
+dashboards. SQL... but it's wrapped
+dogfooding
+-->
 
 <!--
 ## flashcards.charles.uno @ 2021--Present
@@ -56,7 +78,7 @@ validation and monitoring for code that handles 1B messages daily
 
 ## Visiting Assistant Professor of Physics @ St. Olaf College, Fall 2020
 
-- Coached undergraduate juniors in advanced problem solving techniques.
+- Coached undergraduate juniors in advanced problem solving techniques, including numerical modeling and data visualization in **Python**.
 - Coordinated the efforts of two TAs to ensure each student's grasp of core concepts.
 
 <!---
@@ -72,12 +94,17 @@ validation and monitoring for code that handles 1B messages daily
 
 ## Software Engineer: DevOps and Testing @ Cray Inc, 2016--2021
 
-- Led development of a monitoring framework for **Ansible**, **Kubernetes**, and hardware configuration on supercomputers. Published real-time updates to Slack via **REST API**, saving dozens of hours of manual triage daily.
-- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services on commit in support of 100+ engineers. Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+- Led development of a monitoring framework for **Ansible**, **Kubernetes**, and hardware configuration on supercomputers. Published live updates to Slack and Jira via **REST API**.
+- Wrote **CI/CD pipelines** to build, test, and deploy RPMs and **Docker**-based services in support of 100+ engineers.
 - Provisioned distributed resources via **Google Cloud** and **Terraform** for automated testing.
 - Centralized access and analysis of supercomputer log files via multithreaded **Python**. Processed terabytes of text to diagnose hardware failures on a $70 million customer installation.
 
 <!---
+
+Crawled thousands of **Git** repos via Jenkins and BitBucket APIs to validate pipeline updates against live use cases.
+
+saving dozens of person-hours of triage daily
+
 Interfaced with a **time series database** to aggregate build, test, and deployment documents. Extracted actionable metrics for developer, product owner, and VP use cases.
 
 Vendors
@@ -163,13 +190,14 @@ charles.uno, including the Docker setup
 MTG modeling
 -->
 
-# Education
+# Education and Certifications
 
 <!---
 # Education *and certifications*
 
-## Professional Scrum Master 1 @ Scrum.org, 2018
 -->
+
+## Professional Scrum Master 1 @ Scrum.org, 2018
 
 ## Ph.D. (Plasma Physics) @ University of Minnesota, 2016
 <!---
